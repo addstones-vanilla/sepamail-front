@@ -8,10 +8,7 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('ArriveCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ArriveCtrl', function (mandatsFactory, $scope) {
+
+    $scope.mandats = mandatsFactory;
   });

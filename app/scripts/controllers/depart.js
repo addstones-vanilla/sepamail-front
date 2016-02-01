@@ -8,10 +8,12 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('DepartCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('DepartCtrl', function (operationsFactory, $scope) {
+
+    $scope.MandateNumber = operationsFactory.MandateNumber;
+    $scope.SignedDate = operationsFactory.SignedDate;
+    $scope.Status = operationsFactory.Status;
+    $scope.IBAN = operationsFactory.IBAN;
+    $scope.AccountTitle = operationsFactory.AccountTitle;
+    $scope.ListeEmetteur = operationsFactory.ListeEmetteur;
   });
