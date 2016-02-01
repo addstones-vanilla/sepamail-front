@@ -29,6 +29,21 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/arrive', {
+        templateUrl: 'views/arrive.html',
+        controller: 'ArriveCtrl',
+        controllerAs: 'arrive'
+      })
+      .when('/depart', {
+        templateUrl: 'views/depart.html',
+        controller: 'DepartCtrl',
+        controllerAs: 'depart'
+      })
+      .when('/emetteur', {
+        templateUrl: 'views/emetteur.html',
+        controller: 'EmetteurCtrl',
+        controllerAs: 'emetteur'
+      })
       .otherwise({
         redirectTo: '/'
       });
