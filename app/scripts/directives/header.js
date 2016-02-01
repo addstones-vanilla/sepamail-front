@@ -9,17 +9,11 @@
 angular.module('sepamailFrontApp')
   .directive('header', function (headerFactory) {
     return {
-      scope:{
-        name:'@',
-        color1:'@',
-        color2:'@'
-      },
+      scope:false,
       restrict: 'E',
       link: function postLink(scope, element) {
 
-
-
-        element.append(headerFactory.getBank("test"));
+        element.append(headerFactory.getBank(scope.banque_name));
 
 
       }

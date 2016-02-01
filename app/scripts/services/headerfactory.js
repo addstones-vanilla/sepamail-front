@@ -16,8 +16,11 @@ angular.module('sepamailFrontApp')
         var stringHeader;
 
         switch(id){
-          case "test":
-            stringHeader="<h1 style='color:blue; background-color:red'>testFactory</h1>";
+          case "toto":
+            stringHeader="<h1 style='color:blue; background-color:red'>banque Toto</h1>";
+            break;
+          case "tata":
+            stringHeader="<h1 style='color:green; background-color:yellow'>banque Tata</h1>";
             break;
           default:
             stringHeader="<h1>ya une erreur</h1>";

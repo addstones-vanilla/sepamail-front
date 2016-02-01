@@ -2,18 +2,16 @@
 
 /**
  * @ngdoc function
- * @name sepamailFrontApp.controller:MainCtrl
+ * @name sepamailFrontApp.controller:EmetteurCtrl
  * @description
- * # MainCtrl
+ * # EmetteurCtrl
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('MainCtrl', function ($routeParams,$scope) {
+  .controller('EmetteurCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-
-    $scope.banque_name = $routeParams.banque_name;
   });
