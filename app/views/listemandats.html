@@ -1,1 +1,33 @@
-<p>This is the listeMandats view.</p>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>N° du mandat</th>
+      <th>Signé le</th>
+      <th>BIC</th>
+      <th>IBAN</th>
+      <th>Intitulé du compte</th>
+      <th>Statut</th>
+      <th>Prochain statut</th>
+      <th>Avant</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="mandat in mandats">
+      <td>{{mandat.MandateNumber}}</td>
+      <td>{{mandat.SignedDate}}</td>
+      <td>{{mandat.BIC}}</td>
+      <td>{{mandat.IBAN}}</td>
+      <td>{{mandat.AccountTitle}}</td>
+      <td>{{mandat.Status}}</td>
+      <td>{{mandat.NextStatus}}</td>
+      <td>{{mandat.Delay}}</td>
+      <td>
+        <span class="glyphicon glyphicon-plus"></span>
+        <span class="glyphicon glyphicon-search"></span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
