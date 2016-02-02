@@ -2,13 +2,14 @@
 
 /**
  * @ngdoc function
- * @name sepamailFrontApp.controller:MainCtrl
+ * @name sepamailFrontApp.controller:ArriveCtrl
  * @description
- * # MainCtrl
+ * # ArriveCtrl
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('MainCtrl', function ($routeParams,$scope) {
-
+  .controller('ArriveCtrl', function (mandatsFactory, $scope, $routeParams) {
     $scope.banque_name = $routeParams.banque_name;
+
+    $scope.mandats = mandatsFactory;
   });
