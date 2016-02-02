@@ -8,7 +8,7 @@
  * Factory in the sepamailFrontApp.
  */
 angular.module('sepamailFrontApp')
-  .factory('menuTopFactory', function () {
+  .factory('menuTopFactory', function (headerFactory) {
     // Public API here
     return {
       getMenu: function (namespace, bankName) {
@@ -18,11 +18,11 @@ angular.module('sepamailFrontApp')
         switch(namespace){
           case "arrive":
             stringHeader=
-              "<nav class='navbar navbar-default'>" +
+              "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "'>" +
                 "<div class='container'>" +
                   "<ul class='nav navbar-nav'>" +
                     "<li>" +
-                      "<a>Accueil</a>" +
+                      "<a href='/#/" + bankName + "/arrive/accueil'>Accueil</a>" +
                     "</li>" +
                     "<li>" +
                       "<a href='/#/" + bankName + "/arrive/formulaire'>Creer Mandat</a>" +
@@ -51,7 +51,7 @@ angular.module('sepamailFrontApp')
                 "<div class='container'>" +
                   "<ul class='nav navbar-nav'>" +
                     "<li>" +
-                      "<a>Accueil</a>" +
+                      "<a href='/#/" + bankName + "/depart/accueil'>Accueil</a>" +
                     "</li>" +
                     "<li>" +
                       "<a>Changement de domiciliation</a>" +
@@ -73,7 +73,7 @@ angular.module('sepamailFrontApp')
                 "<div class='container'>" +
                   "<ul class='nav navbar-nav'>" +
                     "<li>" +
-                      "<a>Accueil</a>" +
+                      "<a href='/#/" + bankName + "/emetteur/accueil'>Accueil</a>" +
                     "</li>" +
                     "<li>" +
                       "<a>Mandats de mobilité</a>" +

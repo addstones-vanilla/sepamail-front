@@ -39,17 +39,17 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/:banque_name/arrive', {
+      .when('/:banque_name/arrive/accueil', {
         templateUrl: 'views/arrive.html',
         controller: 'ArriveCtrl',
         controllerAs: 'arrive'
       })
-      .when('/:banque_name/depart', {
+      .when('/:banque_name/depart/accueil', {
         templateUrl: 'views/depart.html',
         controller: 'DepartCtrl',
         controllerAs: 'depart'
       })
-      .when('/:banque_name/emetteur', {
+      .when('/:banque_name/emetteur/accueil', {
         templateUrl: 'views/emetteur.html',
         controller: 'EmetteurCtrl',
         controllerAs: 'emetteur'
