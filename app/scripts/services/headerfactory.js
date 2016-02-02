@@ -17,13 +17,13 @@ angular.module('sepamailFrontApp')
         var stringHeader;
 
         switch(id){
-          case "toto":
-            stringHeader="<h1 style='color:white; background-color:red'>banque Toto</h1>";
-            this.colorMenu = "cyan";
+          case "socgen":
+            stringHeader="<h1 style='color:white; background-color:black'>Société Générale</h1>";
+            this.colorMenu = "#F78181";
             break;
-          case "tata":
-            stringHeader="<h1 style='color:white; background-color:green'>banque Tata</h1>";
-            this.colorMenu = "yellow";
+          case "lcl":
+            stringHeader="<h1 style='color:white; background-color:#0000FF'>LCL</h1>";
+            this.colorMenu = "#81DAF5";
             break;
           default:
             console.log(id);
