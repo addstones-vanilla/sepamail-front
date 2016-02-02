@@ -91,3 +91,30 @@ body {
 .container {
   max-width: 100% !important;
 }
+
+.form-well {
+  border-radius: 3px;
+  border:1px solid rgba(96, 125, 139, 0.35);
+  padding-bottom: 2em;
+}
+
+.iban-inputs input {
+  max-width: 40px;
+  display: inline-block;
+}
+
+.header-form {
+  background-color: #78909C;
+  width: 100%;
+  padding: 0.5em 1em;
+  margin-bottom: 2em;
+}
+
+.header-form h5 {
+  color: white;
+
+}
+
+.form-costum .control-label{
+  text-align: left!important;
+}
