@@ -158,3 +158,10 @@ input::-webkit-inner-spin-button {
   font-weight: bold;
   text-align: left!important;
 }
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand{
+  color:#fff;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a{
+  color:#fff;
+}
