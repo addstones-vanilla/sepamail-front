@@ -19,6 +19,16 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
+      .when('/', {
+        templateUrl: 'views/start.html',
+        controller: 'StartCtrl',
+        controllerAs: 'start'
+      })
+      .when('/error', {
+        templateUrl: '404.html',
+        controller: 'ErrorCtrl',
+        controllerAs: 'error'
+      })
       .when('/:banque_name/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
@@ -44,12 +54,7 @@ angular
         controller: 'EmetteurCtrl',
         controllerAs: 'emetteur'
       })
-      .when('/', {
-        templateUrl: '404.html',
-        controller: 'EmetteurCtrl',
-        controllerAs: 'emetteur'
-      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/error'
       });
   });
