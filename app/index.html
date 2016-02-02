@@ -23,9 +23,11 @@
 <![endif]-->
 
 
-<div class="container">
-  <div ng-view=""></div>
-</div>
+  <header></header>
+  <menu-top></menu-top>
+    <div class="container">
+      <div ng-view=""></div>
+    </div>
 
 <div class="footer">
   <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
@@ -46,27 +48,30 @@
 <!-- endbower -->
 <!-- endbuild -->
 
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/about.js"></script>
-<script src="scripts/controllers/arrive.js"></script>
-<script src="scripts/controllers/depart.js"></script>
-<script src="scripts/controllers/emetteur.js"></script>
-<script src="scripts/directives/header.js"></script>
-<script src="scripts/services/headerfactory.js"></script>
-<script src="scripts/services/mandatsfactory.js"></script>
-<script src="scripts/services/operationfactory.js"></script>
-<script src="scripts/services/emetteurfactory.js"></script>
-<script src="scripts/controllers/start.js"></script>
-<script src="scripts/controllers/error.js"></script>
-<script src="scripts/controllers/recapmandat.js"></script>
-<script src="scripts/controllers/recapoperation.js"></script>
-<script src="scripts/controllers/recapemetteur.js"></script>
-<script src="scripts/controllers/listemandats.js"></script>
-<script src="scripts/controllers/listeanomalies.js"></script>
-<script src="scripts/controllers/listeoperations.js"></script>
-<script src="scripts/controllers/listeemetteurs.js"></script>
-<!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/arrive.js"></script>
+        <script src="scripts/controllers/depart.js"></script>
+        <script src="scripts/controllers/emetteur.js"></script>
+        <script src="scripts/directives/header.js"></script>
+        <script src="scripts/services/headerfactory.js"></script>
+        <script src="scripts/services/mandatsfactory.js"></script>
+        <script src="scripts/services/operationfactory.js"></script>
+        <script src="scripts/services/emetteurfactory.js"></script>
+        <script src="scripts/controllers/start.js"></script>
+        <script src="scripts/controllers/error.js"></script>
+        <script src="scripts/controllers/recapmandat.js"></script>
+        <script src="scripts/controllers/recapoperation.js"></script>
+        <script src="scripts/controllers/recapemetteur.js"></script>
+        <script src="scripts/controllers/listemandats.js"></script>
+        <script src="scripts/controllers/listeanomalies.js"></script>
+        <script src="scripts/controllers/listeoperations.js"></script>
+        <script src="scripts/controllers/listeemetteurs.js"></script>
+        <script src="scripts/controllers/formulaire.js"></script>
+        <script src="scripts/directives/menutop.js"></script>
+        <script src="scripts/services/menutopfactory.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
