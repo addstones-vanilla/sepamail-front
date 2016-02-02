@@ -89,6 +89,11 @@ angular
         controller: 'ListeemetteursCtrl',
         controllerAs: 'listeEmetteurs'
       })
+      .when('/:banque_name/formulaire', {
+        templateUrl: 'views/formulaire.html',
+        controller: 'FormulaireCtrl',
+        controllerAs: 'formulaire'
+      })
       .otherwise({
         redirectTo: '/error'
       });
