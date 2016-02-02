@@ -28,16 +28,16 @@ angular.module('sepamailFrontApp')
                       "<a href='/#/" + bankName + "/arrive/formulaire'>Creer Mandat</a>" +
                     "</li>" +
                     "<li>" +
-                      "<a>Mandats non signés</a>" +
+                      "<a href='/#/" + bankName + "/arrive/listeMandats'>Mandats non signés</a>" +
                     "</li>" +
                     "<li>" +
-                      "<a>Mandats signés</a>" +
+                      "<a href='/#/" + bankName + "/arrive/listeMandats'>Mandats signés</a>" +
                     "</li>" +
                     "<li>" +
-                      "<a>Mandats historisés</a>" +
+                      "<a href='/#/" + bankName + "/arrive/listeMandats'>Mandats historisés</a>" +
                     "</li>" +
                     "<li>" +
-                      "<a>Suivi des anomalies</a>" +
+                      "<a href='/#/" + bankName + "/arrive/listeAnomalies'>Suivi des anomalies</a>" +
                     "</li>" +
                   "</ul>" +
                 "</div>" +
@@ -47,20 +47,20 @@ angular.module('sepamailFrontApp')
 
           case "depart":
             stringHeader=
-              "<nav class='navbar navbar-default'>" +
+              "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "'>" +
                 "<div class='container'>" +
                   "<ul class='nav navbar-nav'>" +
                     "<li>" +
                       "<a href='/#/" + bankName + "/depart/accueil'>Accueil</a>" +
                     "</li>" +
                     "<li>" +
-                      "<a>Changement de domiciliation</a>" +
+                      "<a href='/#/" + bankName + "/depart/listeOperations'>Changement de domiciliation</a>" +
                     "</li>" +
                     "<li>" +
-                      "<a>Suivi des remises</a>" +
+                      "<a href='/#/" + bankName + "/depart/listeEmetteurs'>Suivi des remises</a>" +
                     "</li>" +
                     "<li>" +
-                      "<a>Suivi des anomalies</a>" +
+                      "<a href='/#/" + bankName + "/depart/listeAnomalies'>Suivi des anomalies</a>" +
                     "</li>" +
                   "</ul>" +
                 "</div>" +
@@ -69,17 +69,17 @@ angular.module('sepamailFrontApp')
 
           case "emetteur":
             stringHeader=
-              "<nav class='navbar navbar-default'>" +
+              "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "'>" +
                 "<div class='container'>" +
                   "<ul class='nav navbar-nav'>" +
                     "<li>" +
                       "<a href='/#/" + bankName + "/emetteur/accueil'>Accueil</a>" +
                     "</li>" +
                     "<li>" +
-                      "<a>Mandats de mobilité</a>" +
+                      "<a href='/#/" + bankName + "/emetteur/listeMandats'>Mandats de mobilité</a>" +
                     "</li>" +
                     "<li>" +
-                      "<a>Suivi des anomalies</a>" +
+                      "<a href='/#/" + bankName + "/emetteur/listeAnomalies'>Suivi des anomalies</a>" +
                     "</li>" +
                   "</ul>" +
                 "</div>" +

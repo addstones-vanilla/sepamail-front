@@ -69,22 +69,22 @@ angular
         controller: 'RecapemetteurCtrl',
         controllerAs: 'recapEmetteur'
       })
-      .when('/:banque_name/listeMandats', {
+      .when('/:banque_name/:etat/listeMandats', {
         templateUrl: 'views/listemandats.html',
         controller: 'ListemandatsCtrl',
         controllerAs: 'listeMandats'
       })
-      .when('/:banque_name/listeAnomalies', {
+      .when('/:banque_name/:etat/listeAnomalies', {
         templateUrl: 'views/listeanomalies.html',
         controller: 'ListeanomaliesCtrl',
         controllerAs: 'listeAnomalies'
       })
-      .when('/:banque_name/listeOperations', {
+      .when('/:banque_name/:etat/listeOperations', {
         templateUrl: 'views/listeoperations.html',
         controller: 'ListeoperationsCtrl',
         controllerAs: 'listeOperations'
       })
-      .when('/:banque_name/listeEmetteurs', {
+      .when('/:banque_name/:etat/listeEmetteurs', {
         templateUrl: 'views/listeemetteurs.html',
         controller: 'ListeemetteursCtrl',
         controllerAs: 'listeEmetteurs'
