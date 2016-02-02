@@ -8,7 +8,9 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('EmetteurCtrl', function (emetteursFactory, $scope) {
+  .controller('EmetteurCtrl', function (emetteursFactory, $routeParams, $scope) {
+    $scope.banque_name = $routeParams.banque_name;
+
     $scope.MandateNumber = emetteursFactory.MandateNumber;
     $scope.SignedDate = emetteursFactory.SignedDate;
     $scope.Status = emetteursFactory.Status;

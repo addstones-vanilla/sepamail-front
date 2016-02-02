@@ -23,7 +23,7 @@ angular.module('sepamailFrontApp')
             stringHeader="<h1 style='color:green; background-color:yellow'>banque Tata</h1>";
             break;
           default:
-            stringHeader="<h1>ya une erreur</h1>";
+            document.location.href = "/404.html";
         }
 
         return stringHeader;

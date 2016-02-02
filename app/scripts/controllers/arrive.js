@@ -8,7 +8,8 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('ArriveCtrl', function (mandatsFactory, $scope) {
+  .controller('ArriveCtrl', function (mandatsFactory, $scope, $routeParams) {
+    $scope.banque_name = $routeParams.banque_name;
 
     $scope.mandats = mandatsFactory;
   });

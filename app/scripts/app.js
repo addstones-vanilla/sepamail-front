@@ -19,33 +19,33 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/main', {
+      .when('/:banque_name/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/main/:banque_name', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
+      .when('/:banque_name/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/arrive', {
+      .when('/:banque_name/arrive', {
         templateUrl: 'views/arrive.html',
         controller: 'ArriveCtrl',
         controllerAs: 'arrive'
       })
-      .when('/depart', {
+      .when('/:banque_name/depart', {
         templateUrl: 'views/depart.html',
         controller: 'DepartCtrl',
         controllerAs: 'depart'
       })
-      .when('/emetteur', {
+      .when('/:banque_name/emetteur', {
         templateUrl: 'views/emetteur.html',
+        controller: 'EmetteurCtrl',
+        controllerAs: 'emetteur'
+      })
+      .when('/', {
+        templateUrl: '404.html',
         controller: 'EmetteurCtrl',
         controllerAs: 'emetteur'
       })

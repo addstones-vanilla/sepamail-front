@@ -8,7 +8,8 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('DepartCtrl', function (operationsFactory, $scope) {
+  .controller('DepartCtrl', function (operationsFactory, $routeParams, $scope) {
+    $scope.banque_name = $routeParams.banque_name;
 
     $scope.MandateNumber = operationsFactory.MandateNumber;
     $scope.SignedDate = operationsFactory.SignedDate;
