@@ -22,7 +22,7 @@ angular.module('sepamailFrontApp')
             this.colorMenu = "#F78181";
             break;
           case "lcl":
-            stringHeader="<h1 style='color:white; background-color:#0000FF'>LCL</h1>";
+            stringHeader="<h1 style='color:white; background-color:#1C439F'>LCL</h1>";
             this.colorMenu = "#81DAF5";
             break;
           default:
