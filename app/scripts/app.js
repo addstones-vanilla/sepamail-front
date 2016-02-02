@@ -54,6 +54,41 @@ angular
         controller: 'EmetteurCtrl',
         controllerAs: 'emetteur'
       })
+      .when('/:banque_name/recapMandat', {
+        templateUrl: 'views/recapmandat.html',
+        controller: 'RecapmandatCtrl',
+        controllerAs: 'recapMandat'
+      })
+      .when('/:banque_name/recapOperation', {
+        templateUrl: 'views/recapoperation.html',
+        controller: 'RecapoperationCtrl',
+        controllerAs: 'recapOperation'
+      })
+      .when('/:banque_name/recapEmetteur', {
+        templateUrl: 'views/recapemetteur.html',
+        controller: 'RecapemetteurCtrl',
+        controllerAs: 'recapEmetteur'
+      })
+      .when('/:banque_name/listeMandats', {
+        templateUrl: 'views/listemandats.html',
+        controller: 'ListemandatsCtrl',
+        controllerAs: 'listeMandats'
+      })
+      .when('/:banque_name/listeAnomalies', {
+        templateUrl: 'views/listeanomalies.html',
+        controller: 'ListeanomaliesCtrl',
+        controllerAs: 'listeAnomalies'
+      })
+      .when('/:banque_name/listeOperations', {
+        templateUrl: 'views/listeoperations.html',
+        controller: 'ListeoperationsCtrl',
+        controllerAs: 'listeOperations'
+      })
+      .when('/:banque_name/listeEmetteurs', {
+        templateUrl: 'views/listeemetteurs.html',
+        controller: 'ListeemetteursCtrl',
+        controllerAs: 'listeEmetteurs'
+      })
       .otherwise({
         redirectTo: '/error'
       });
