@@ -29,7 +29,7 @@ angular
         controller: 'ErrorCtrl',
         controllerAs: 'error'
       })
-      .when('/:banque_name/main', {
+      .when('/:banque_name/:test/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
@@ -54,7 +54,7 @@ angular
         controller: 'EmetteurCtrl',
         controllerAs: 'emetteur'
       })
-      .when('/:banque_name/recapMandat', {
+      .when('/:banque_name/:etat/recapMandat', {
         templateUrl: 'views/recapmandat.html',
         controller: 'RecapmandatCtrl',
         controllerAs: 'recapMandat'
@@ -88,6 +88,11 @@ angular
         templateUrl: 'views/listeemetteurs.html',
         controller: 'ListeemetteursCtrl',
         controllerAs: 'listeEmetteurs'
+      })
+      .when('/:banque_name/arrive/formulaire', {
+        templateUrl: 'views/formulaire.html',
+        controller: 'FormulaireCtrl',
+        controllerAs: 'formulaire'
       })
       .otherwise({
         redirectTo: '/error'
