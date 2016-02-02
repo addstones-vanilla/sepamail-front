@@ -4,7 +4,7 @@
  * @ngdoc function
  * @name sepamailFrontApp.controller:ErrorCtrl
  * @description
- * # ErrorCtrl
+ * # ErrorCtrle
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
