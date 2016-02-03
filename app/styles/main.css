@@ -144,7 +144,14 @@ tr>td.hiddenRow {
 }
 
 .tableCollapsed td {
+  font-weight: bold;
 }
+
+.table {
+  /*table-layout: fixed;*/
+  /*word-wrap: ;*/
+}
+
 
 .header-form {
   /*background-color: #455A64;*/
