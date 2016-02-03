@@ -54,20 +54,20 @@ angular
         controller: 'EmetteurCtrl',
         controllerAs: 'emetteur'
       })
-      .when('/:banque_name/:etat/mandat', {
-        templateUrl: 'views/recapmandat.html',
+      .when('/:banque_name/:etat/mandat-operation/:nbMandat', {
+        templateUrl: 'views/mandat-operation.html',
         controller: 'RecapmandatCtrl',
         controllerAs: 'recapMandat'
+      })
+      .when('/:banque_name/:etat/mandat-emetteur/:nbMandat', {
+        templateUrl: 'views/mandat-emetteur.html',
+        controller: 'MandatEmetteurCtrl',
+        controllerAs: 'mandatEmetteur'
       })
       .when('/:banque_name/recapOperation', {
         templateUrl: 'views/recapoperation.html',
         controller: 'RecapoperationCtrl',
         controllerAs: 'recapOperation'
-      })
-      .when('/:banque_name/recapEmetteur', {
-        templateUrl: 'views/recapemetteur.html',
-        controller: 'RecapemetteurCtrl',
-        controllerAs: 'recapEmetteur'
       })
       .when('/:banque_name/:etat/listeMandats', {
         templateUrl: 'views/listemandats.html',

@@ -8,10 +8,14 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('RecapmandatCtrl', function () {
+  .controller('RecapmandatCtrl', function ($routeParams, mandatsFactory, $scope) {
+    var mandatId = $routeParams.nbMandat;
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $scope.mandat = mandatsFactory[mandatId];
+    $scope.banque = $routeParams.banque_name;
   });

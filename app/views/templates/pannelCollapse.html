@@ -1,0 +1,8 @@
+<div class="panel panel-default">
+    <div class="panel-heading" ng-click="toogleVisibility()">
+        <i class="glyphicon" ng-class="{'glyphicon-plus-sign': !showPannel, 'glyphicon-minus-sign': showPannel}"></i>
+        <p class="panel-heading-title">{{title}}</p>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel-body" ng-show="showPannel" ng-transclude></div>
+</div>

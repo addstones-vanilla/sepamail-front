@@ -18,13 +18,13 @@ angular.module('sepamailFrontApp')
 
         switch(id){
           case "socgen":
-            stringHeader="<div class='page-header' style='color:white; background-color:#1D1D1B'>" +
+            stringHeader="<div style='color:white; background-color:#1D1D1B'>" +
               "<img src='/images/banques/societe-generale.jpg' height='100'>" +
           "</div>";
             this.colorMenu = "#E5022F";
             break;
           case "lcl":
-            stringHeader="<div class='page-header' style='color:white; background-color:#21368B'>" +
+            stringHeader="<div style='color:white; background-color:#21368B'>" +
               "<img src='/images/banques/lcl.png' height='100'>" +
               "</div>";
             this.colorMenu = "#00B4E5";

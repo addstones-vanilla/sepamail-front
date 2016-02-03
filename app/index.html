@@ -14,6 +14,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/graphStyle.css">
     <!-- endbuild -->
   </head>
   <body ng-app="sepamailFrontApp">
@@ -30,7 +31,6 @@
     </div>
 
 
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -45,35 +45,43 @@
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
     <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/arrive.js"></script>
-        <script src="scripts/controllers/depart.js"></script>
-        <script src="scripts/controllers/emetteur.js"></script>
-        <script src="scripts/directives/header.js"></script>
-        <script src="scripts/services/headerfactory.js"></script>
-        <script src="scripts/services/mandatsfactory.js"></script>
-        <script src="scripts/services/operationfactory.js"></script>
-        <script src="scripts/services/emetteurfactory.js"></script>
-        <script src="scripts/controllers/start.js"></script>
-        <script src="scripts/controllers/error.js"></script>
-        <script src="scripts/controllers/recapmandat.js"></script>
-        <script src="scripts/controllers/recapoperation.js"></script>
-        <script src="scripts/controllers/recapemetteur.js"></script>
-        <script src="scripts/controllers/listemandats.js"></script>
-        <script src="scripts/controllers/listeanomalies.js"></script>
-        <script src="scripts/controllers/listeoperations.js"></script>
-        <script src="scripts/controllers/listeemetteurs.js"></script>
-        <script src="scripts/controllers/formulaire.js"></script>
-        <script src="scripts/directives/menutop.js"></script>
-        <script src="scripts/services/menutopfactory.js"></script>
-        <script src="scripts/directives/heading-color.js"></script>
-        <script src="scripts/directives/bordercolor.js"></script>
-        <!-- endbuild -->
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<script src="scripts/controllers/arrive.js"></script>
+<script src="scripts/controllers/depart.js"></script>
+<script src="scripts/controllers/emetteur.js"></script>
+<script src="scripts/directives/header.js"></script>
+<script src="scripts/services/headerfactory.js"></script>
+<script src="scripts/services/mandatsfactory.js"></script>
+<script src="scripts/services/operationfactory.js"></script>
+<script src="scripts/services/emetteurfactory.js"></script>
+<script src="scripts/controllers/start.js"></script>
+<script src="scripts/controllers/error.js"></script>
+<script src="scripts/controllers/recapmandat.js"></script>
+<script src="scripts/controllers/recapoperation.js"></script>
+<script src="scripts/controllers/recapemetteur.js"></script>
+<script src="scripts/controllers/listemandats.js"></script>
+<script src="scripts/controllers/listeanomalies.js"></script>
+<script src="scripts/controllers/listeoperations.js"></script>
+<script src="scripts/controllers/listeemetteurs.js"></script>
+<script src="scripts/controllers/formulaire.js"></script>
+<script src="scripts/directives/menutop.js"></script>
+<script src="scripts/services/menutopfactory.js"></script>
+<script src="scripts/directives/heading-color.js"></script>
+<script src="scripts/directives/bordercolor.js"></script>
+<script src="scripts/directives/containerCollapse.js"></script>
+<script src="scripts/directives/pannelCollapse.js"></script>
+<script src="scripts/directives/lineargraph.js"></script>
+<script src="scripts/filters/statusfilter.js"></script>
+  <script src="scripts/controllers/mandatEmetteur.js"></script>
+  <script src="scripts/directives/containerTabCollapse.js"></script>
+<script src="scripts/directives/tabCollapse.js"></script>
+<!-- endbuild -->
 </body>
 </html>
