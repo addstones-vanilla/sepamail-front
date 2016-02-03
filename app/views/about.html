@@ -1,4 +1,4 @@
-<h2 class="text-center">FORMS</h2>
+<h3 class="text-left">FORMS</h3>
 
 <form action="" class="form-horizontal form-costum">
   <!--start form arrivee-->
@@ -202,6 +202,10 @@
           </div>
         </div>
       </div>
+      <div class="text-right">
+        <button type="submit" class="btn btn-lg btn-primary">Ajouter un titulaire</button>
+        <button type="submit" class="btn btn-lg btn-primary disabled" disabled>Ajouter un mandataire</button>
+      </div>
     </div>
   </div>
   <!--end form titulaire-->
@@ -230,21 +234,18 @@
         </div>
       </div>
     </div>
-    </div>
-    <!--end form Options du mandat-->
+  </div>
+  <!--end form Options du mandat-->
 
-
-    <button type="submit" class="btn btn-lg btn-primary">Ajouter un titulaire</button>
-    <button type="submit" class="btn btn-lg btn-primary">Ajouter un mandataire</button>
 </form>
 
 <hr>
 
-<h3>TABLES</h3>
+<h3 class="text-left">TABLES</h3>
 
-<div class="table-responsive">
+<div class="panel panel-primary table-responsive">
   <table class="table table-bordered">
-    <thead>
+    <thead style="color: #ffffff; background-color: #158cba; border-color: transparent;">
     <tr>
       <th>N° du mandat</th>
       <th>Signé le</th>
@@ -258,7 +259,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
+    <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle panel-collapse collapse in">
       <td>FRPPCEPAXX2015111001</td>
       <td>19/11/2015</td>
       <td>CEPAFRPP001</td>
@@ -267,20 +268,19 @@
       <td>Signé</td>
       <td>Transmis</td>
       <td>1j</td>
-      <td>
+      <td class="text-center">
         <span class="glyphicon glyphicon-plus"></span>
         <span class="glyphicon glyphicon-search"></span>
       </td>
-      <div class="hidden">
-        <table>
-          <tr>
-            <td>Vue opérations</td>
-          </tr>
-          <tr>
-            <td>Vue émetteurs</td>
-          </tr>
-        </table>
-      </div>
+    </tr>
+    <tr class="hiddenRow">
+      <td colspan="9">
+        <div class="accordian-body collapse" id="demo1" style="background-color: red">
+          <table>
+
+          </table>
+        </div>
+      </td>
     </tr>
     </tbody>
   </table>
