@@ -36,7 +36,7 @@ angular.module('sepamailFrontApp')
       },
       {
         "MandateNumber" : "MDT-GFIIFRPPXXX-0002",
-        "SignedDate" : "07/02/2017",
+        "SignedDate" : "07/03/2017",
         "BIC" : "CMBRFR2BARK",
         "IBAN" : "FR76 1820 6002 1054 8726 6700 217" ,
         "AccountTitle" : "Monsieur BANKS",
@@ -60,7 +60,7 @@ angular.module('sepamailFrontApp')
       },
       {
         "MandateNumber" : "MDT-GFIIFRPPXXX-0003",
-        "SignedDate" : "07/02/2017",
+        "SignedDate" : "07/04/2017",
         "BIC" : "CMBRFR2BEFI",
         "IBAN" : "FR76 1820 6002 1054 8726 6700 217" ,
         "AccountTitle" : "Monsieur BANKS",

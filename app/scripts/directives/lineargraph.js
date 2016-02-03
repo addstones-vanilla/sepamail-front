@@ -10,20 +10,22 @@ angular.module('sepamailFrontApp')
   .directive('linearGraph', function () {
     return {
       restrict: 'A',
-      link: function postLink(scope, element, attrs) { function getDate(d) {
-        var dt = new Date(d.date);
-        dt.setHours(0);
-        dt.setMinutes(0);
-        dt.setSeconds(0);
-        dt.setMilliseconds(0);
-        return dt;
-      }
+      scope: false,
+      link: function postLink(scope, element, attrs) {
+        function getDate(d) {
+          var dt = new Date(d.date);
+          dt.setHours(0);
+          dt.setMinutes(0);
+          dt.setSeconds(0);
+          dt.setMilliseconds(0);
+          return dt;
+        }
 
         function showData(obj, d) {
           var coord = d3.mouse(obj);
           var infobox = d3.select(".infobox");
           // now we just position the infobox roughly where our mouse is
-          infobox.style("left", (coord[0] + 100) + "px" );
+          infobox.style("left", (coord[0] + 100) + "px");
           infobox.style("top", (coord[1] - 175) + "px");
           $(".infobox").html(d);
           $(".infobox").show();
@@ -33,13 +35,13 @@ angular.module('sepamailFrontApp')
           $(".infobox").hide();
         }
 
-        var drawChart = function(data) {
+        var drawChart = function (data) {
           // define dimensions of graph
           var m = [20, 40, 20, 100]; // margins
           var w = 700 - m[1] - m[3]; // width
           var h = 360 - m[0] - m[2]; // height
 
-          data.sort(function(a, b) {
+          data.sort(function (a, b) {
             var d1 = getDate(a);
             var d2 = getDate(b);
             if (d1 == d2) return 0;
@@ -49,31 +51,37 @@ angular.module('sepamailFrontApp')
 
 // get max and min dates - this assumes data is sorted
           var minDate = getDate(data[0]),
-            maxDate = getDate(data[data.length-1]);
+            maxDate = getDate(data[data.length - 1]);
 
           var x = d3.time.scale().domain([minDate, maxDate]).range([0, w]);
 
 // X scale will fit all values from data[] within pixels 0-w
           //var x = d3.scale.linear().domain([0, data.length]).range([0, w]);
           // Y scale will fit values from 0-10 within pixels h-0 (Note the inverted domain for the y-scale: bigger is up!)
-          var y = d3.scale.linear().domain([0, d3.max(data, function(d) { return d.trendingValue; } )]).range([h, 0]);
+          var y = d3.scale.linear().domain([0, d3.max(data, function (d) {
+            return d.trendingValue;
+          })]).range([h, 0]);
 
 // create a line function that can convert data[] into x and y points
           var line = d3.svg.line()
             // assign the X function to plot our line as we wish
-            .x(function(d, i) {
+            .x(function (d, i) {
               // return the X coordinate where we want to plot this datapoint
               return x(getDate(d)); //x(i);
             })
-            .y(function(d) {
+            .y(function (d) {
               // return the Y coordinate where we want to plot this datapoint
               return y(d.trendingValue);
             });
 
-          function xx(e) { return x(getDate(e)); };
-          function yy(e) { return y(e.trendingValue); };
+          function xx(e) {
+            return x(getDate(e));
+          };
+          function yy(e) {
+            return y(e.trendingValue);
+          };
 
-          $(element[0]).append("<p><small><em>Please move the mouse over data points to see details.</em></small></p>");
+          $(element[0]).append("<h1 class='text-center'>Nombre d'arrivés</h1>");
 
 // Add an SVG element with the desired dimensions and margin.
           var graph = d3.select(element[0]).append("svg:svg")
@@ -108,24 +116,21 @@ angular.module('sepamailFrontApp')
             .attr("r", 5)
             .attr("cx", xx)
             .attr("cy", yy)
-            .on("mouseover", function(d) { showData(this, d.trendingValue);})
-            .on("mouseout", function(){ hideData();});
+            .on("mouseover", function (d) {
+              showData(this, d.trendingValue);
+            })
+            .on("mouseout", function () {
+              hideData();
+            });
 
           graph.append("svg:path").attr("d", line(data));
-          graph.append("svg:text")
-            .attr("x", -200)
-            .attr("y", -90)
-            .attr("dy", ".1em")
-            .attr("transform", "rotate(-90)")
-            .text("Trending Value");
 
 
           $(element[0]).append("<div class='infobox' style='display:none;'>Test</div>");
         }
 
-        var draw = function() {
-          var data = [ {'date': "2012-10-01", 'trendingValue': 1000}, {'date': "2012-09-01", 'trendingValue': 900}, {'date': "2012-08-01", 'trendingValue': 1100}, {'date': "2012-07-01", 'trendingValue': 950}, {'date': "2012-06-01", 'trendingValue': 1050}];
-          drawChart(data);
+        var draw = function () {
+          drawChart(scope.data);
         }
 
         draw();
