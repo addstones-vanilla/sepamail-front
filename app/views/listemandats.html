@@ -1,5 +1,5 @@
 <div class="table-responsive">
-  <table class="table table-bordered">
+  <table class="table table-bordered" style="border-collapse:collapse;">
     <thead>
     <tr>
       <th>N° du mandat</th>
@@ -14,7 +14,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="mandat in mandats">
+    <tr ng-repeat-start="mandat in mandats">
       <td>{{mandat.MandateNumber}}</td>
       <td>{{mandat.SignedDate}}</td>
       <td>{{mandat.BIC}}</td>
@@ -26,6 +26,44 @@
       <td>
         <span class="glyphicon glyphicon-plus"></span>
         <span class="glyphicon glyphicon-search"></span>
+      </td>
+    </tr>
+    <tr ng-repeat-end="">
+      <td colspan="9" class="hiddenRow tableCollapsed">
+        <div id="demo3">
+          <table class="table table-bordered text-center">
+            <tbody>
+            <tr class="active">
+              <td class="text-uppercase">Vue opérations</td>
+              <td>Prélèvement reçus</td>
+              <td>75</td>
+              <td>Virements émis</td>
+              <td>49</td>
+              <td>Virements reçus</td>
+              <td>NC</td>
+              <td>Chèques non débités</td>
+              <td>NC</td>
+              <td class="text-center">
+                <span class="glyphicon glyphicon-search"></span>
+              </td>
+            </tr>
+            <tr class="active">
+              <td class="text-uppercase">Vue émetteurs</td>
+              <td>Nombre d’émetteurs</td>
+              <td>15</td>
+              <td>Nombre de banques</td>
+              <td>5</td>
+              <td>Banques à informer</td>
+              <td>3</td>
+              <td>Nombre d’exceptions</td>
+              <td>2</td>
+              <td>
+                <span class="glyphicon glyphicon-search"></span>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </td>
     </tr>
     </tbody>
