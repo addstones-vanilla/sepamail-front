@@ -62,7 +62,6 @@ body {
   margin-top: 28px;
 }
 
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -104,7 +103,7 @@ body {
   display: inline-block;
 }
 
-.birthay-inputs input{
+.birthay-inputs input {
   max-width: 45px;
   display: inline-block;
 }
@@ -112,17 +111,39 @@ body {
 .birthay-inputs .birthay-inputs-year {
   max-width: 70px;
 }
+
 .birthay-inputs .birthay-inputs-city {
   max-width: 200px;
 }
 
 input[type='number'] {
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.table th {
+  background-color: #158cba;
+  color: #fff;
+}
+
+.table td, .table th {
+  text-align: center;
+}
+
+tr>td.hiddenRow {
+  padding: 0!important;
+}
+
+.tableCollapsed .table {
+  padding: 0;
+  margin: 0;
+}
+
+.tableCollapsed td {
 }
 
 .header-form {
@@ -154,14 +175,15 @@ input::-webkit-inner-spin-button {
   padding: 0;
 }
 
-.form-costum .control-label{
+.form-costum .control-label {
   font-weight: bold;
-  text-align: left!important;
+  text-align: left !important;
 }
 
-.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand{
-  color:#fff;
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand {
+  color: #fff;
 }
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a{
-  color:#fff;
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a {
+  color: #fff;
 }
