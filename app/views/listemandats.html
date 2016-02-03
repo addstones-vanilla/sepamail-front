@@ -36,13 +36,13 @@
             <tr class="active">
               <td class="text-uppercase">Vue opérations</td>
               <td>Prélèvement reçus</td>
-              <td>75</td>
+              <td>{{mandat.OperationView.NbDirectDebit}}</td>
               <td>Virements émis</td>
-              <td>49</td>
+              <td>{{mandat.OperationView.NbReceivedCreditTransfer}}</td>
               <td>Virements reçus</td>
-              <td>NC</td>
+              <td>{{mandat.OperationView.NbSentCreditTransfer}}</td>
               <td>Chèques non débités</td>
-              <td>NC</td>
+              <td>{{mandat.OperationView.Nbcheck}}</td>
               <td class="text-center">
                 <span class="glyphicon glyphicon-search"></span>
               </td>
@@ -50,13 +50,13 @@
             <tr class="active">
               <td class="text-uppercase">Vue émetteurs</td>
               <td>Nombre d’émetteurs</td>
-              <td>15</td>
+              <td>{{mandat.RemitterView.NbRemitter}}</td>
               <td>Nombre de banques</td>
-              <td>5</td>
+              <td>{{mandat.RemitterView.NbOfBank}}</td>
               <td>Banques à informer</td>
-              <td>3</td>
+              <td>{{mandat.RemitterView.BankToNotice}}</td>
               <td>Nombre d’exceptions</td>
-              <td>2</td>
+              <td>{{mandat.RemitterView.NbOfExceptions}}</td>
               <td>
                 <span class="glyphicon glyphicon-search"></span>
               </td>

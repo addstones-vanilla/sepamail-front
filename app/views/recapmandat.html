@@ -1,17 +1,154 @@
-<div class="panel panel-default">
+<h2>Fil d'arianne</h2>
+<ul class="breadcrumb">
+  <li><a href="#/{{banque}}/arrive/listeMandats">Mandat signé</a></li>
+  <li class="active">Liste des opérations</li>
+</ul>
+
+<div class="panel panel-primary">
+  <div class="panel-heading"></div>
   <div class="panel-body">
     <div class="col-md-6">
       <label class="col-sm-4">Mandat n°</label>
-      <p class="col-sm-8">MDT-GFIIFRPPXXX-0001</p>
+
+      <p class="col-sm-8">{{mandat.MandateNumber}}</p>
+
       <div class="col-sm-6">
-        <label class="col-sm-4">Signé le</label>
-        <p class="col-sm-8">19/01/2005</p>
+        <label class="col-sm-6">Signé le</label>
+
+        <p class="col-sm-6">{{mandat.SignedDate}}</p>
       </div>
       <div class="col-sm-6">
         <label class="col-sm-4">Etat</label>
-        <p class="col-sm-8">signé</p>
+
+        <p class="col-sm-8">{{mandat.Status}}</p>
       </div>
     </div>
-    <div class="col-md-6">lkjlkj</div>
+    <div class="col-md-6">
+      <div class="col-md-12 col-sm-6">
+        <label class="col-sm-4">Libellé compte</label>
+
+        <p class="col-sm-8">{{mandat.AccountTitle}}</p>
+      </div>
+
+      <div class="col-md-12 col-sm-6">
+        <label class="col-sm-2">IBAN</label>
+
+        <p class="col-sm-10">{{mandat.IBAN}}</p>
+      </div>
+    </div>
   </div>
 </div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Prélèvements reçus : {{mandat.OperationView.NbDirectDebit}}</h3>
+  </div>
+  <div class="table-responsive">
+    <div class="row text-center">
+      <div class="col-xs-6">Emetteur 1</div>
+      <div class="col-xs-6">BIC :</div>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>ICS</th>
+        <th>RUM</th>
+        <th>Type</th>
+        <th>Référence opération</th>
+        <th>Pays</th>
+        <th>État</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td ng-bind-html="0 | statusFilter">
+
+
+        </td>
+        <td><span class="glyphicon glyphicon-search"></span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Virements reçus : {{mandat.OperationView.NbSentCreditTransfer}}</h3>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Émetteur</th>
+        <th>BIC</th>
+        <th>Référence opération</th>
+        <th>Pays</th>
+        <th>État</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td ng-bind-html="2 | statusFilter">
+        </td>
+        <td><span class="glyphicon glyphicon-search"></span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Virements émis : {{mandat.OperationView.NbReceivedCreditTransfer}}</h3>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Émetteur</th>
+        <th>BIC</th>
+        <th>Référence opération</th>
+        <th>Pays</th>
+        <th>État</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td ng-bind-html="1 | statusFilter">
+        </td>
+        <td><span class="glyphicon glyphicon-search"></span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Chèques non débités : {{mandat.OperationView.Nbcheck}}</h3>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Numéro du chéque</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

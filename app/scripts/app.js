@@ -54,7 +54,7 @@ angular
         controller: 'EmetteurCtrl',
         controllerAs: 'emetteur'
       })
-      .when('/:banque_name/:etat/mandat', {
+      .when('/:banque_name/:etat/mandat/:nbMandat', {
         templateUrl: 'views/recapmandat.html',
         controller: 'RecapmandatCtrl',
         controllerAs: 'recapMandat'
