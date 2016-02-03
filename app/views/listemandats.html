@@ -24,13 +24,13 @@
       <td>{{mandat.NextStatus}}</td>
       <td>{{mandat.Delay}}</td>
       <td>
-        <span class="glyphicon glyphicon-plus" ng-click="toogleVisibility()"></span>
+        <span class="glyphicon glyphicon-plus" ng-click="toogleVisibility()" data-toggle="collapse"></span>
         <span class="glyphicon glyphicon-search"></span>
       </td>
     </tr>
     <tr ng-repeat-end="">
       <td colspan="9" class="hiddenRow tableCollapsed">
-        <div id="demo3">
+        <div class="collapse" id="demo3">
           <table class="table table-bordered text-center">
             <tbody>
             <tr class="active">
