@@ -8,8 +8,8 @@
   <td>{{mandat.NextStatus}}</td>
   <td>{{mandat.Delay}}</td>
   <td>
-    <a class="icon btn btn-xs glyphicon" ng-class="{'glyphicon-plus-sign': !showPannel, 'glyphicon-minus-sign': showPannel}" ng-click="toogleVisibility()"></a>
-    <span class="glyphicon glyphicon-search"></span>
+    <a href="" ng-click="toogleVisibility()"><i class="glyphicon" ng-class="{'glyphicon-plus-sign text-success': !showPannel, 'glyphicon-minus-sign text-danger': showPannel}"></i></a>
+    <a ng-href="#/{{banque}}/arrive/mandat-operation/{{mandat.MandateNumber}}"><i class="glyphicon" ng-class="{'glyphicon-search': !showPannel, 'hidden': showPannel}"></i></a>
   </td>
 </tr>
 <tr ng-show="showPannel">
@@ -28,7 +28,7 @@
           <td>Chèques non débités</td>
           <td>{{mandat.OperationView.Nbcheck}}</td>
           <td class="text-center">
-            <a class="glyphicon glyphicon-search" href="#/{{banque}}/arrive/mandat-operation/{{mandat.MandateNumber}}"></a>
+            <a ng-href="#/{{banque}}/arrive/mandat-operation/{{mandat.MandateNumber}}"><i class="glyphicon glyphicon-search"></i></a>
           </td>
         </tr>
         <tr class="active">
@@ -42,7 +42,7 @@
           <td>Nombre d’exceptions</td>
           <td>{{mandat.RemitterView.NbOfExceptions}}</td>
           <td>
-            <span class="glyphicon glyphicon-search"></span>
+            <a ng-href="#/{{banque}}/arrive/mandat-operation/{{mandat.MandateNumber}}"><i class="glyphicon glyphicon-search"></i></a>
           </td>
         </tr>
         </tbody>
