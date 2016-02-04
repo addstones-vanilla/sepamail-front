@@ -8,7 +8,7 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('MandatEmetteurCtrl', function ($routeParams, mandatsFactory, $scope) {
+  .controller('MandatEmetteurCtrl', function ($routeParams, emetteursFactory, $scope) {
     var mandatId = $routeParams.nbMandat;
     this.awesomeThings = [
       'HTML5 Boilerplate',
@@ -16,6 +16,9 @@ angular.module('sepamailFrontApp')
       'Karma'
     ];
 
-    $scope.mandat = mandatsFactory[mandatId];
+    $scope.mandat = emetteursFactory;
+
+    $scope.emetteurs = emetteursFactory.ListRemitter;
+
     $scope.banque = $routeParams.banque_name;
   });

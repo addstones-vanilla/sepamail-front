@@ -70,10 +70,10 @@ angular.module('sepamailFrontApp')
               "<div class='collapse navbar-collapse' id='depart-navbar-collapse-1'>"+
               "<ul class='nav navbar-nav'>"+
               "<li>" +
-              "<a href='/#/" + bankName + "/emetteur/listeMandats'>Changement de domiciliation</a>" +
+              "<a href='/#/" + bankName + "/emetteur/listedomiciliation'>Changement de domiciliation</a>" +
               "</li>" +
               "<li>" +
-              "<a href='/#/" + bankName + "/emetteur/listeEmetteurs'>Suivi des remises</a>" +
+              "<a href='/#/" + bankName + "/emetteur/suiviRemises'>Suivi des remises</a>" +
               "</li>" +
               "<li>" +
               "<a href='/#/" + bankName + "/emetteur/listeAnomalies'>Suivi des anomalies</a>" +
@@ -100,7 +100,7 @@ angular.module('sepamailFrontApp')
               "<div class='collapse navbar-collapse' id='emetteur-navbar-collapse-1'>"+
               "<ul class='nav navbar-nav'>"+
               "<li>" +
-              "<a href='/#/" + bankName + "/depart/listeMandats'>Mandats de mobilité</a>" +
+              "<a href='/#/" + bankName + "/depart/listeMobilite'>Mandats de mobilité</a>" +
               "</li>" +
               "<li>" +
               "<a href='/#/" + bankName + "/depart/listeAnomalies'>Suivi des anomalies</a>" +

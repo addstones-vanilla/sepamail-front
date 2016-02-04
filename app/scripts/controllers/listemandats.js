@@ -22,6 +22,9 @@ angular.module('sepamailFrontApp')
       case "historique":
             $scope.filAriane = "Mandats historisés";
             break;
+      case "mobilite":
+        $scope.filAriane = "Mandats de mobilité";
+        break;
       default:
             $scope.filAriane = "erreur";
             break;

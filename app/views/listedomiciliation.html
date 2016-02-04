@@ -1,0 +1,32 @@
+<ul class="breadcrumb">
+  <li><a href="#/{{banque}}/emetteur/accueil">Banque d'emetteur</a></li>
+  <li class="active">Changement domiciliations</li>
+</ul>
+
+<container-tab-collapse>
+  <table class="table table-bordered">
+    <thead>
+    <tr  heading-color>
+      <th>N° du mandat</th>
+      <th>Reçu le</th>
+      <th>Statut</th>
+      <th>Prochain statut</th>
+      <th>Avant</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="mandat in mandats">
+    <tr>
+      <td>{{mandat.MandateNumber}}</td>
+      <td>{{mandat.SignedDate}}</td>
+      <td>{{mandat.Status}}</td>
+      <td>{{mandat.NextStatus}}</td>
+      <td>{{mandat.Delay}}</td>
+      <td>
+        <a ng-href="#/{{banque}}/emetteur/mandat-operation/{{mandat.MandateNumber}}"><i class="glyphicon" ng-class="{'glyphicon-search': !showPannel, 'hidden': showPannel}"></i></a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</container-tab-collapse>

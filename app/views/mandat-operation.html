@@ -4,7 +4,7 @@
   <li class="active">Liste des opérations</li>
 </ul>
 
-<div class="panel panel-primary">
+<div color-pannel class="panel panel-primary">
   <div class="panel-heading"></div>
   <div class="panel-body">
     <div class="col-md-6">
@@ -41,32 +41,30 @@
 
 
 <container-collapse>
-  <pannel-collapse title="Prélèvements reçus" value="{{mandat.OperationView.NbDirectDebit}}">
-    <div class="table-responsive">
+  <pannel-collapse title="Prélèvements reçus" value="{{prelevementNb}}">
+    <div class="table-responsive" ng-repeat="prelevement in prelevements">
       <div class="row text-center">
-        <div class="col-xs-6">Emetteur 1</div>
-        <div class="col-xs-6">BIC :</div>
+        <div class="col-xs-6">{{prelevement.Creditor}}</div>
+        <div class="col-xs-6">BIC : {{prelevement.BIC}}</div>
       </div>
-      <table class="table table-bordered">
+      <table class="table table-bordered" ng-repeat="remitter in prelevement.ListDirectDebitRemitter">
         <thead>
         <tr heading-color>
           <th>ICS</th>
           <th>RUM</th>
           <th>Type</th>
           <th>Référence opération</th>
-          <th>Pays</th>
           <th>État</th>
           <th>Action</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td ng-bind-html="0 | statusFilter">
+          <td>{{prelevement.ICS}}</td>
+          <td>{{remitter.RUM}}</td>
+          <td>{{remitter.Type}}</td>
+          <td>{{remitter.Reference}}</td>
+          <td ng-bind-html="remitter.Status | statusFilter">
 
 
           </td>
@@ -79,26 +77,24 @@
 </container-collapse>
 
 <container-collapse>
-  <pannel-collapse title="Virements reçus" value="{{mandat.OperationView.NbSentCreditTransfer}}">
+  <pannel-collapse title="Virements reçus" value="{{virementRecuNb}}">
     <div class="table-responsive">
-      <table class="table table-bordered">
+      <table class="table table-bordered" ng-repeat="virement in virementRecus">
         <thead>
         <tr heading-color>
           <th>Émetteur</th>
           <th>BIC</th>
           <th>Référence opération</th>
-          <th>Pays</th>
           <th>État</th>
           <th>Action</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td ng-bind-html="2 | statusFilter">
+          <td>{{virement.Emetteur}}</td>
+          <td>{{virement.BIC}}</td>
+          <td>{{virement.Reference}}</td>
+          <td ng-bind-html="virement.Status | statusFilter">
           </td>
           <td><span class="glyphicon glyphicon-search"></span></td>
         </tr>
@@ -109,26 +105,24 @@
 </container-collapse>
 
 <container-collapse>
-  <pannel-collapse title="Virements émis" value="{{mandat.OperationView.NbReceivedCreditTransfer}}">
+  <pannel-collapse title="Virements émis" value="{{virementEmiNb}}">
     <div class="table-responsive">
-      <table class="table table-bordered">
+      <table class="table table-bordered" ng-repeat="virement in virementEmis">
         <thead>
         <tr heading-color>
           <th>Émetteur</th>
           <th>BIC</th>
           <th>Référence opération</th>
-          <th>Pays</th>
           <th>État</th>
           <th>Action</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td ng-bind-html="1 | statusFilter">
+          <td>{{virementEmisEmetteur.Creditor}}</td>
+          <td>{{virementEmisEmetteur.BIC}}</td>
+          <td>{{virement.Reference}}</td>
+          <td ng-bind-html="virement.Status | statusFilter">
           </td>
           <td><span class="glyphicon glyphicon-search"></span></td>
         </tr>
@@ -139,17 +133,17 @@
 </container-collapse>
 
 <container-collapse>
-  <pannel-collapse title="Chèques non débités" value="{{mandat.OperationView.Nbcheck}}">
+  <pannel-collapse title="Chèques non débités" value="{{checkNb}}">
     <div class="table-responsive">
-      <table class="table table-bordered">
+      <table class="table table-bordered" ng-repeat="check in checks">
         <thead>
-        <tr>
+        <tr heading-color>
           <th>Numéro du chéque</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-          <td>&nbsp;</td>
+          <td>{{check.checkNumber}}</td>
         </tr>
         </tbody>
       </table>

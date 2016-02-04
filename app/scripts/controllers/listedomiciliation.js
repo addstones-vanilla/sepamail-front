@@ -8,10 +8,13 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('ListeoperationsCtrl', function () {
+  .controller('ListedomiciliationCtrl', function ($scope,$routeParams, mandatsFactory) {
+    $scope.banque = $routeParams.banque_name;
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $scope.mandats = mandatsFactory;
   });

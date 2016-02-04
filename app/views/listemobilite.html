@@ -1,0 +1,25 @@
+<ul class="breadcrumb">
+  <li><a href="#/{{banque}}/depart/accueil">Banque d'arrivé</a></li>
+  <li class="active">Mandats de mobilité</li>
+</ul>
+
+<container-tab-collapse>
+  <table class="table table-bordered">
+    <thead>
+    <tr  heading-color>
+      <th>N° du mandat</th>
+      <th>Signé le</th>
+      <th>BIC</th>
+      <th>IBAN</th>
+      <th>Intitulé du compte</th>
+      <th>Statut</th>
+      <th>Prochain statut</th>
+      <th>Avant</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody tab-collapse-mobilite ng-repeat="mandat in mandats">
+    </tbody>
+  </table>
+
+</container-tab-collapse>

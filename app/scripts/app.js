@@ -74,20 +74,25 @@ angular
         controller: 'ListemandatsCtrl',
         controllerAs: 'listeMandats'
       })
+      .when('/:banque_name/:etat/listeMobilite', {
+        templateUrl: 'views/listemobilite.html',
+        controller: 'ListemobiliteCtrl',
+        controllerAs: 'listeMobilite'
+      })
       .when('/:banque_name/:etat/listeAnomalies', {
         templateUrl: 'views/listeanomalies.html',
         controller: 'ListeanomaliesCtrl',
         controllerAs: 'listeAnomalies'
       })
-      .when('/:banque_name/:etat/listeOperations', {
-        templateUrl: 'views/listeoperations.html',
-        controller: 'ListeoperationsCtrl',
-        controllerAs: 'listeOperations'
+      .when('/:banque_name/:etat/listedomiciliation', {
+        templateUrl: 'views/listedomiciliation.html',
+        controller: 'ListedomiciliationCtrl',
+        controllerAs: 'listeDomiciliation'
       })
-      .when('/:banque_name/:etat/listeEmetteurs', {
-        templateUrl: 'views/listeemetteurs.html',
-        controller: 'ListeemetteursCtrl',
-        controllerAs: 'listeEmetteurs'
+      .when('/:banque_name/:etat/suiviRemises', {
+        templateUrl: 'views/listeremises.html',
+        controller: 'ListeremiseCtrl',
+        controllerAs: 'listeRemises'
       })
       .when('/:banque_name/arrive/formulaire', {
         templateUrl: 'views/formulaire.html',

@@ -2,14 +2,17 @@
 
 /**
  * @ngdoc function
- * @name sepamailFrontApp.controller:ListeemetteursCtrl
+ * @name sepamailFrontApp.controller:ListemobiliteCtrl
  * @description
- * # ListeemetteursCtrl
+ * # ListemobiliteCtrl
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('ListeremiseCtrl', function ($routeParams,$scope) {
+  .controller('ListemobiliteCtrl', function ($scope, mandatsFactory,$routeParams) {
     $scope.banque = $routeParams.banque_name;
+
+    $scope.mandats = mandatsFactory;
+
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
