@@ -35,13 +35,13 @@ angular.module('sepamailFrontApp')
                         "<a href='/#/" + bankName + "/arrive/formulaire'>Creer Mandat</a>" +
                       "</li>" +
                       "<li>" +
-                        "<a href='/#/" + bankName + "/arrive/listeMandats'>Mandats non signés</a>" +
+                        "<a href='/#/" + bankName + "/arrive/listeMandats/non-signe'>Mandats non signés</a>" +
                       "</li>" +
                       "<li>" +
-                        "<a href='/#/" + bankName + "/arrive/listeMandats'>Mandats signés</a>" +
+                        "<a href='/#/" + bankName + "/arrive/listeMandats/signe'>Mandats signés</a>" +
                       "</li>" +
                       "<li>" +
-                        "<a href='/#/" + bankName + "/arrive/listeMandats'>Mandats historisés</a>" +
+                        "<a href='/#/" + bankName + "/arrive/listeMandats/historique'>Mandats historisés</a>" +
                       "</li>" +
                       "<li>" +
                         "<a href='/#/" + bankName + "/arrive/listeAnomalies'>Suivi des anomalies</a>" +

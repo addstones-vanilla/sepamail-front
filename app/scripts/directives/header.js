@@ -7,19 +7,23 @@
  * # header
  */
 angular.module('sepamailFrontApp')
-  .directive('header', function ($routeParams, headerFactory, $location) {
+  .directive('header', function ($routeParams, headerFactory, $location, $rootScope) {
     return {
       restrict: 'E',
       link: function postLink(scope, element) {
 
-        var urlPath = $location.path();
 
-        var bankName = urlPath.split("/");
+        $rootScope.$on('$viewContentLoaded', function() {
 
-        var bank =
-        element.append(headerFactory.getBank(bankName[1]));
+          element.html('');
 
 
+          var urlPath = $location.path();
+
+          var bankName = urlPath.split("/");
+
+            element.append(headerFactory.getBank(bankName[1]));
+        })
       }
     };
   });

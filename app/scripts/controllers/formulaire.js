@@ -8,7 +8,9 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('FormulaireCtrl', function () {
+  .controller('FormulaireCtrl', function ($scope,$routeParams) {
+    $scope.banque = $routeParams.banque_name;
+
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

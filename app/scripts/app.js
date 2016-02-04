@@ -69,7 +69,7 @@ angular
         controller: 'RecapoperationCtrl',
         controllerAs: 'recapOperation'
       })
-      .when('/:banque_name/:etat/listeMandats', {
+      .when('/:banque_name/:etat/listeMandats/:statut', {
         templateUrl: 'views/listemandats.html',
         controller: 'ListemandatsCtrl',
         controllerAs: 'listeMandats'

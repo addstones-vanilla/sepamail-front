@@ -8,7 +8,8 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('ListeanomaliesCtrl', function () {
+  .controller('ListeanomaliesCtrl', function ($scope,$routeParams) {
+    $scope.banque = $routeParams.banque_name;
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
