@@ -16,7 +16,6 @@
 
         this.addPanelCollapse = function (pannel) {
           pannels.push(pannel);
-          console.log(pannels);
         };
 
         this.opening = function (selectedPannel) {

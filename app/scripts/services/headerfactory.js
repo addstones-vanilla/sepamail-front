@@ -11,7 +11,7 @@ angular.module('sepamailFrontApp')
   .factory('headerFactory', function () {
     // Public API here
     return {
-      colorMenu: "black",
+      colorMenu: "#A9ACAC",
       getBank: function (id) {
 
         var stringHeader;
