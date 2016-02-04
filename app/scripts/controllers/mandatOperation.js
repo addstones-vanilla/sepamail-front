@@ -15,7 +15,14 @@ angular.module('sepamailFrontApp')
       'AngularJS',
       'Karma'
     ];
+    var arret = false;
+    var index = 0;
+    while(!arret){
+      if(arret = mandatId === mandatsFactory[index].MandateNumber){
+        $scope.mandat = mandatsFactory[index];
+      }
 
-    $scope.mandat = mandatsFactory[mandatId];
+      index++;
+    }
     $scope.banque = $routeParams.banque_name;
   });

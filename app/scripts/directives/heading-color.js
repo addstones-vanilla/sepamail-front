@@ -14,6 +14,8 @@ angular.module('sepamailFrontApp')
 
         element.css('background-color',headerFactory.colorMenu);
         element.css('border-color',headerFactory.colorMenu);
+
+        console.log(headerFactory.colorMenu);
       }
     };
   });

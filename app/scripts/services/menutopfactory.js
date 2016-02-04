@@ -84,7 +84,7 @@ angular.module('sepamailFrontApp')
               "</nav>";
             break;
 
-          case "emetteur":
+          case "depart":
           stringHeader=
               "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "'>" +
               "<div class='container-fluid'>" +
@@ -95,15 +95,15 @@ angular.module('sepamailFrontApp')
               "<span class='icon-bar'></span>"+
               "<span class='icon-bar'></span>"+
               "</button>"+
-              "<a class='navbar-brand' href='/#/" + bankName + "/emetteur/accueil'>Accueil</a>"+
+              "<a class='navbar-brand' href='/#/" + bankName + "/depart/accueil'>Accueil</a>"+
               "</div>" +
               "<div class='collapse navbar-collapse' id='emetteur-navbar-collapse-1'>"+
               "<ul class='nav navbar-nav'>"+
               "<li>" +
-              "<a href='/#/" + bankName + "/emetteur/listeMandats'>Mandats de mobilité</a>" +
+              "<a href='/#/" + bankName + "/depart/listeMandats'>Mandats de mobilité</a>" +
               "</li>" +
               "<li>" +
-              "<a href='/#/" + bankName + "/emetteur/listeAnomalies'>Suivi des anomalies</a>" +
+              "<a href='/#/" + bankName + "/depart/listeAnomalies'>Suivi des anomalies</a>" +
               "</li>" +
               "</ul>" +
               "</div>" +
