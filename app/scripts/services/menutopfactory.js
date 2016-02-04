@@ -18,7 +18,7 @@ angular.module('sepamailFrontApp')
         switch(namespace){
           case "arrive":
             stringHeader=
-              "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "'>" +
+              "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "; border-color:" + headerFactory.colorMenu + "'>" +
                 "<div class='container-fluid'>" +
                   "<div class='navbar-header'>" +
                     "<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#arrive-navbar-collapse-1' aria-expanded='false'>"+
@@ -56,7 +56,7 @@ angular.module('sepamailFrontApp')
           case "emetteur":
 
             stringHeader=
-              "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "'>" +
+              "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "; border-color:" + headerFactory.colorMenu + "'>" +
               "<div class='container-fluid'>" +
               "<div class='navbar-header'>" +
               "<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#depart-navbar-collapse-1' aria-expanded='false'>"+
@@ -86,7 +86,7 @@ angular.module('sepamailFrontApp')
 
           case "depart":
           stringHeader=
-              "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "'>" +
+              "<nav class='navbar navbar-default' style='background-color:" + headerFactory.colorMenu + "; border-color:" + headerFactory.colorMenu + "'>" +
               "<div class='container-fluid'>" +
               "<div class='navbar-header'>" +
               "<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#emetteur-navbar-collapse-1' aria-expanded='false'>"+
