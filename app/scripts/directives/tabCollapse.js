@@ -6,11 +6,12 @@
 
   function tabCollapse() {
     return {
-      restrict: 'EA',
+      restrict: 'A',
       require: '^containerTabCollapse',
       transclude: true,
       templateUrl: "views/templates/tabCollapse.html",
       link: function(scope, element, attrs, containerCtrl)  {
+
         scope.showPannel = false;
 
         containerCtrl.addPanelCollapse(scope);
