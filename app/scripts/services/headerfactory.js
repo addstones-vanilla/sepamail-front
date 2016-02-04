@@ -21,7 +21,7 @@ angular.module('sepamailFrontApp')
             stringHeader="<div style='color:white; background-color:#1D1D1B'>" +
               "<img src='/images/banques/societe-generale.jpg' height='100'>" +
           "</div>";
-            this.colorMenu = "#E5022F";
+            this.colorMenu = "#E62C23";
             break;
           case "lcl":
             stringHeader="<div style='color:white; background-color:#21368B'>" +
