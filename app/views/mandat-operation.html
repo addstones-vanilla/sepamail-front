@@ -47,7 +47,7 @@
         <div class="col-xs-6">{{prelevement.Creditor}}</div>
         <div class="col-xs-6">BIC : {{prelevement.BIC}}</div>
       </div>
-      <table class="table table-bordered" ng-repeat="remitter in prelevement.ListDirectDebitRemitter">
+      <table class="table table-bordered">
         <thead>
         <tr heading-color>
           <th>ICS</th>
@@ -58,7 +58,7 @@
           <th>Action</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody ng-repeat="remitter in prelevement.ListDirectDebitRemitter">
         <tr>
           <td>{{prelevement.ICS}}</td>
           <td>{{remitter.RUM}}</td>
@@ -79,7 +79,7 @@
 <container-collapse>
   <pannel-collapse title="Virements reçus" value="{{virementRecuNb}}">
     <div class="table-responsive">
-      <table class="table table-bordered" ng-repeat="virement in virementRecus">
+      <table class="table table-bordered" >
         <thead>
         <tr heading-color>
           <th>Émetteur</th>
@@ -89,7 +89,7 @@
           <th>Action</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody ng-repeat="virement in virementRecus">
         <tr>
           <td>{{virement.Emetteur}}</td>
           <td>{{virement.BIC}}</td>
@@ -107,7 +107,7 @@
 <container-collapse>
   <pannel-collapse title="Virements émis" value="{{virementEmiNb}}">
     <div class="table-responsive">
-      <table class="table table-bordered" ng-repeat="virement in virementEmis">
+      <table class="table table-bordered">
         <thead>
         <tr heading-color>
           <th>Émetteur</th>
@@ -117,7 +117,7 @@
           <th>Action</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody ng-repeat="virement in virementEmis">
         <tr>
           <td>{{virementEmisEmetteur.Creditor}}</td>
           <td>{{virementEmisEmetteur.BIC}}</td>
@@ -135,13 +135,13 @@
 <container-collapse>
   <pannel-collapse title="Chèques non débités" value="{{checkNb}}">
     <div class="table-responsive">
-      <table class="table table-bordered" ng-repeat="check in checks">
+      <table class="table table-bordered">
         <thead>
         <tr heading-color>
           <th>Numéro du chéque</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody  ng-repeat="check in checks">
         <tr>
           <td>{{check.checkNumber}}</td>
         </tr>

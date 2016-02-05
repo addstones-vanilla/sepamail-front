@@ -209,6 +209,21 @@ a.deco-none {
   text-decoration:none;
 }
 
-.navbar, .navbar > * {
+.navbar, .navbar > *, .btn {
   border: none;
+}
+
+pannel-collapse .panel, pannel-collapse .panel-body, pannel-collapse .table {
+  margin: 0;
+  padding: 0;
+}
+
+
+h5.title-header-form {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+
+.panel-titulaire {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }

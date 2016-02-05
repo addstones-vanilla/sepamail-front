@@ -1,10 +1,17 @@
 
-
-<script type="text/javascript">
-
-</script>
-
-<div linear-graph id="chart">
-</div>
-
-
+  <nvd3-pie-chart
+    data="exampleData"
+    width="550"
+    height="350"
+    id="donutRatioExample"
+    x="xFunction()"
+    y="yFunction()"
+    donut="true"
+    showlegend="true"
+    tooltips="true"
+    tooltipcontent="toolTipContentFunction()"
+    labelType="value"
+    showLabels="true"
+    donutRatio=".35">
+    <svg></svg>
+  </nvd3-pie-chart>
