@@ -1,0 +1,77 @@
+<ul class="breadcrumb">
+  <li><a href="#/{{banque}}/emetteur/accueil">Banque d'emetteur</a></li>
+  <li><a href="#/{{banque}}/emetteur/suiviRemises">Suivi des remises</a></li>
+  <li class="active">Liste des opérations de mandats</li>
+</ul>
+
+<div color-pannel class="panel panel-primary">
+  <div class="panel-heading"></div>
+  <div class="panel-body">
+    <div class="col-md-6">
+      <label class="col-sm-4">Identifiant remise</label>
+
+      <p class="col-sm-8">{{remise.Reference}}</p>
+
+      <div class="col-sm-6">
+        <label class="col-sm-6">Crée le</label>
+
+        <p class="col-sm-6">{{remise.CreatedDate}}</p>
+      </div>
+      <div class="col-sm-6">
+        <label class="col-sm-4">Etat</label>
+
+        <p class="col-sm-8">{{remise.Status}}</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-12 col-sm-6">
+        <label class="col-sm-4">Emetteur</label>
+
+        <p class="col-sm-8">{{emetteur.Remitter}}</p>
+      </div>
+
+      <div class="col-sm-6">
+        <label class="col-sm-2">IBAN</label>
+
+        <p class="col-sm-10">{{mandat.IBAN}}</p>
+      </div>
+      <div class="col-sm-6">
+        <label class="col-sm-2">BIC</label>
+
+        <p class="col-sm-10">{{emetteur.BIC}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<container-collapse>
+  <pannel-collapse-emetteur title="Numéro du mandat : {{mandat.MandateNumber}}    |    Libellé Compte : {{mandat.AccountTitle}}">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+        <tr heading-color>
+          <th>Type</th>
+          <th>Référence Opération</th>
+          <th>RUM</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="prelevement in emetteur.ListDirectDebitRemitter">
+          <td>Prélèvement</td>
+          <td>{{prelevement.Reference}}</td>
+          <td>{{prelevement.RUM}}</td>
+          <td><span class="glyphicon glyphicon-search"></span></td>
+        </tr>
+        <tr ng-repeat="virement in emetteur.ListReceivedCreditTransferRemitter">
+          <td>Virement</td>
+          <td>{{virement.Reference}}</td>
+          <td>{{virement.RUM}}</td>
+          <td><span class="glyphicon glyphicon-search"></span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </pannel-collapse-emetteur>
+</container-collapse>
