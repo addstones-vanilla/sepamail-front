@@ -100,6 +100,11 @@ angular
         controller: 'FormulaireCtrl',
         controllerAs: 'formulaire'
       })
+      .when('/:banque_name/emetteur/emetteur-view', {
+        templateUrl: 'views/emetteur-view.html',
+        controller: 'EmetteurViewCtrl',
+        controllerAs: 'emetteurView'
+      })
       .otherwise({
         redirectTo: '/error'
       });

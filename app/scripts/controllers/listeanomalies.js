@@ -8,7 +8,7 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('ListeanomaliesCtrl', function ($scope,$routeParams) {
+  .controller('ListeanomaliesCtrl', function ($scope,$routeParams, anomalieFactory) {
     $scope.banque = $routeParams.banque_name;
     $scope.etat = $routeParams.etat;
 
@@ -25,9 +25,6 @@ angular.module('sepamailFrontApp')
       default:
             $scope.filEtat = "erreur";
     }
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+    $scope.anomalies = anomalieFactory.ListException;
   });

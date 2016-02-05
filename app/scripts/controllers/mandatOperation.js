@@ -9,11 +9,19 @@
  */
 angular.module('sepamailFrontApp')
   .controller('RecapmandatCtrl', function ($routeParams,operationsFactory, $scope) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.etat = $routeParams.etat;
+
+    if($scope.etat === "arrive"){
+      $scope.filArianeName = "Mandats signés";
+      $scope.filAriane = "listeMandats/signe";
+    }
+    else if($scope.etat === "emetteur"){
+      $scope.filArianeName = "Changement domiciliations";
+      $scope.filAriane ="listedomiciliation";
+    }
+
+
+
     $scope.mandat = operationsFactory;
 
     $scope.prelevements = operationsFactory.ListeEmetteur[0].ListDirectDebit;

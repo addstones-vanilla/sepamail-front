@@ -1,8 +1,9 @@
 <ul class="breadcrumb">
-  <li><a href="#/{{banque}}/arrive/accueil">Banque d'arrivé</a></li>
-  <li><a href="#/{{banque}}/arrive/listeMandats/signe">Mandat signé</a></li>
+  <li><a href="#/{{banque}}/{{etat}}/accueil">Banque d'arrivé</a></li>
+  <li><a href="#/{{banque}}/{{etat}}/{{filAriane}}">{{filArianeName}}</a></li>
   <li class="active">Liste des opérations</li>
 </ul>
+
 
 <div color-pannel class="panel panel-primary">
   <div class="panel-heading"></div>
@@ -40,16 +41,25 @@
 </div>
 
 
+<div class="text-right">
+  <button type="submit" class="btn btn-default">Exporter</button>
+  <button type="submit" class="btn btn-default">Imprimer</button>
+</div>
+<br>
+
 <container-collapse>
   <pannel-collapse title="Prélèvements reçus" value="{{prelevementNb}}">
     <div class="table-responsive" ng-repeat="prelevement in prelevements">
       <div class="row text-center">
-        <div class="col-xs-6">{{prelevement.Creditor}}</div>
-        <div class="col-xs-6">BIC : {{prelevement.BIC}}</div>
+        <br>
+        <div class="col-xs-6"><b>{{prelevement.Creditor}}</b></div>
+        <div class="col-xs-6"><b>BIC : {{prelevement.BIC}}</b></div>
+        <br>
+        <br>
       </div>
       <table class="table table-bordered">
         <thead>
-        <tr heading-color>
+        <tr heading-color="">
           <th>ICS</th>
           <th>RUM</th>
           <th>Type</th>
