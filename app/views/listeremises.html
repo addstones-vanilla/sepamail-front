@@ -1,5 +1,5 @@
 <ul class="breadcrumb">
-  <li><a href="#/{{banque}}/emetteur/accueil">Banque d'emetteur</a></li>
+  <li><a ng-href="#/{{banque}}/emetteur/accueil">Banque d'emetteur</a></li>
   <li class="active">Suivi des remises</li>
 </ul>
 
@@ -23,7 +23,7 @@
       <td>{{remise.BIC}}</td>
       <td>{{remise.Status}}</td>
       <td>
-        <a href="#/{{banque}}/emetteur/emetteur-view"><i class="glyphicon" ng-class="{'glyphicon-search': !showPannel, 'hidden': showPannel}"></i></a>
+        <a ng-href="#/{{banque}}/emetteur/emetteur-view"><i class="glyphicon" ng-class="{'glyphicon-search': !showPannel, 'hidden': showPannel}"></i></a>
       </td>
     </tr>
     </tbody>

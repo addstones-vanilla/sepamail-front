@@ -27,24 +27,24 @@ angular.module('sepamailFrontApp')
                       "<span class='icon-bar'></span>"+
                       "<span class='icon-bar'></span>"+
                     "</button>"+
-                    "<a class='navbar-brand' href='/#/" + bankName + "/arrive/accueil'>Accueil</a>"+
+                    "<a class='navbar-brand' href='#/" + bankName + "/arrive/accueil'>Accueil</a>"+
                   "</div>" +
                   "<div class='collapse navbar-collapse' id='arrive-navbar-collapse-1'>"+
                     "<ul class='nav navbar-nav'>"+
                       "<li>" +
-                        "<a href='/#/" + bankName + "/arrive/formulaire'>Creer Mandat</a>" +
+                        "<a href='#/" + bankName + "/arrive/formulaire'>Creer Mandat</a>" +
                       "</li>" +
                       "<li>" +
-                        "<a href='/#/" + bankName + "/arrive/listeMandats/non-signe'>Mandats non signés</a>" +
+                        "<a href='#/" + bankName + "/arrive/listeMandats/non-signe'>Mandats non signés</a>" +
                       "</li>" +
                       "<li>" +
-                        "<a href='/#/" + bankName + "/arrive/listeMandats/signe'>Mandats signés</a>" +
+                        "<a href='#/" + bankName + "/arrive/listeMandats/signe'>Mandats signés</a>" +
                       "</li>" +
                       "<li>" +
-                        "<a href='/#/" + bankName + "/arrive/listeMandats/historique'>Mandats historisés</a>" +
+                        "<a href='#/" + bankName + "/arrive/listeMandats/historique'>Mandats historisés</a>" +
                       "</li>" +
                       "<li>" +
-                        "<a href='/#/" + bankName + "/arrive/listeAnomalies'>Suivi des anomalies</a>" +
+                        "<a href='#/" + bankName + "/arrive/listeAnomalies'>Suivi des anomalies</a>" +
                       "</li>" +
                     "</ul>" +
                   "</div>" +
@@ -65,18 +65,18 @@ angular.module('sepamailFrontApp')
               "<span class='icon-bar'></span>"+
               "<span class='icon-bar'></span>"+
               "</button>"+
-              "<a class='navbar-brand' href='/#/" + bankName + "/emetteur/accueil'>Accueil</a>"+
+              "<a class='navbar-brand' href='#/" + bankName + "/emetteur/accueil'>Accueil</a>"+
               "</div>" +
               "<div class='collapse navbar-collapse' id='depart-navbar-collapse-1'>"+
               "<ul class='nav navbar-nav'>"+
               "<li>" +
-              "<a href='/#/" + bankName + "/emetteur/listedomiciliation'>Changement de domiciliation</a>" +
+              "<a href='#/" + bankName + "/emetteur/listedomiciliation'>Changement de domiciliation</a>" +
               "</li>" +
               "<li>" +
-              "<a href='/#/" + bankName + "/emetteur/suiviRemises'>Suivi des remises</a>" +
+              "<a href='#/" + bankName + "/emetteur/suiviRemises'>Suivi des remises</a>" +
               "</li>" +
               "<li>" +
-              "<a href='/#/" + bankName + "/emetteur/listeAnomalies'>Suivi des anomalies</a>" +
+              "<a href='#/" + bankName + "/emetteur/listeAnomalies'>Suivi des anomalies</a>" +
               "</li>" +
               "</ul>" +
               "</div>" +
@@ -95,15 +95,15 @@ angular.module('sepamailFrontApp')
               "<span class='icon-bar'></span>"+
               "<span class='icon-bar'></span>"+
               "</button>"+
-              "<a class='navbar-brand' href='/#/" + bankName + "/depart/accueil'>Accueil</a>"+
+              "<a class='navbar-brand' href='#/" + bankName + "/depart/accueil'>Accueil</a>"+
               "</div>" +
               "<div class='collapse navbar-collapse' id='emetteur-navbar-collapse-1'>"+
               "<ul class='nav navbar-nav'>"+
               "<li>" +
-              "<a href='/#/" + bankName + "/depart/listeMobilite'>Mandats de mobilité</a>" +
+              "<a href='#/" + bankName + "/depart/listeMobilite'>Mandats de mobilité</a>" +
               "</li>" +
               "<li>" +
-              "<a href='/#/" + bankName + "/depart/listeAnomalies'>Suivi des anomalies</a>" +
+              "<a href='#/" + bankName + "/depart/listeAnomalies'>Suivi des anomalies</a>" +
               "</li>" +
               "</ul>" +
               "</div>" +
