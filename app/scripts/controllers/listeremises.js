@@ -8,11 +8,13 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('ListeremiseCtrl', function ($routeParams,$scope) {
+  .controller('ListeremiseCtrl', function ($routeParams,$scope, remiseFactory) {
     $scope.banque = $routeParams.banque_name;
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $scope.remises = remiseFactory.ListException;
   });
