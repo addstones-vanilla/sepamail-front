@@ -227,3 +227,25 @@ h5.title-header-form {
 .panel-titulaire {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+#donutRatioExample{
+  width: auto;
+  height: auto;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.graph {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+

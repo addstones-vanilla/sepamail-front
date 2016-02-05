@@ -1,17 +1,23 @@
+<div class="row">
+  <div class="col-md-6">
+    <h3>Banques de départ</h3>
+    <hr>
+    <div class="svg-container">
+      <nvd3 options='optionsDonut' data='dataDonut' class="graph"></nvd3>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h3>Banques de départ</h3>
+    <hr>
+    <div class="svg-container">
+      <nvd3 options='optionsBars' data='dataBars' class="graph"></nvd3>
+    </div>
+  </div>
+</div>
 
-  <nvd3-pie-chart
-    data="exampleData"
-    width="550"
-    height="350"
-    id="donutRatioExample"
-    x="xFunction()"
-    y="yFunction()"
-    donut="true"
-    showlegend="true"
-    tooltips="true"
-    tooltipcontent="toolTipContentFunction()"
-    labelType="value"
-    showLabels="true"
-    donutRatio=".35">
-    <svg></svg>
-  </nvd3-pie-chart>
+
+<h3>Nombre d'arrivées</h3>
+<hr>
+<div class="svg-container">
+  <nvd3 options='options' data='data' class="graph"></nvd3>
+</div>

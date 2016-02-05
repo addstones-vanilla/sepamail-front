@@ -10,57 +10,198 @@
 angular.module('sepamailFrontApp')
   .controller('ArriveCtrl', function (mandatsFactory, $scope) {
 
-    $scope.labels = ['Jan 2017', 'Feb 2017', 'Mars 2017', 'Avril 2017', 'Mai 2017', 'Juin 2017'];
-    $scope.series = ['AGRIFRPPXXX', 'SOGEFRPPXXX', 'CEPAFRPPXXX', 'BNPAFRPPXXX'];
-
-    $scope.data = [
-      [65, 59, 80, 81, 56, 55],
-      [28, 48, 40, 19, 86, 27],
-      [28, 48, 40, 19, 86, 27],
-      [28, 48, 40, 19, 86, 27]
-    ];
-
-    $scope.labels2 = ["AGRIFRPPXXX", "SOGEFRPPXXX", "CEPAFRPPXXX, BNPAFRPPXXX"];
-    $scope.data2 = [25, 25, 25, 25];
-
-    var colorArray = ['#000000', '#660000', '#CC0000', '#FF6666'];
-    $scope.colorFunction = function () {
-      return function (d, i) {
-        return colorArray[i];
-      };
+    $scope.optionsDonut = {
+      chart: {
+        type: 'pieChart',
+        donut: true,
+        x: function (d) {
+          return d.key;
+        },
+        y: function (d) {
+          return d.y;
+        },
+        showLabels: true,
+        duration: 500,
+        labelType: "value",
+        legend: {
+          vers: 'furious'
+        }
+      }
     };
 
-    $scope.xFunction = function () {
-      return function (d) {
-        return d.key;
-      };
-    }
-
-    $scope.yFunction = function () {
-      return function (d) {
-        return d.y;
-      };
-    }
-
-    $scope.toolTipContentFunction = function () {
-      return function (key, x, y, e, graph) {
-        return '<div>' + key  + '</div>';
+    $scope.dataDonut = [
+      {
+        key: "AGRIFRPPXXX",
+        y: 65,
+        color: "#660000"
+      },
+      {
+        key: "SOGEFRPPXXX",
+        y: 59,
+        color: '#CC0000'
+      },
+      {
+        key: "CEPAFRPPXXX",
+        y: 40
+      },
+      {
+        key: "BNPAFRPPXXX",
+        y: 19
       }
-    }
-
-
-    $scope.exampleData = [
-      {key: "AGRIFRPPXXX", y: 65},
-      {key: "SOGEFRPPXXX", y: 59},
-      {key: "CEPAFRPPXXX", y: 40},
-      {key: "BNPAFRPPXXX", y: 19}
     ];
 
+    var dates = ['Jan 2017', 'Feb 2017', 'Mars 2017', 'Avril 2017', 'Mai 2017'];
 
-    //var mandats = mandatsFactory;
-    //
-    //var newData = [];
-    //
-    //$scope.data = newData;
+    $scope.optionsBars = {
+      chart: {
+        type: 'multiBarChart',
+        legend: {
+          vers: 'furious'
+        },
+        clipEdge: true,
+        staggerLabels: true,
+        duration: 500,
+        stacked: true,
+        xAxis: {
+          axisLabelDistance: -20,
+          //axisLabel: 'Date',
+          //tickValues: [0, 1, 2, 3, 4, 5, 6],
+          tickFormat: function (d) {
+            return dates[d];
+          }
+        },
+        yAxis: {
+          //axisLabel: 'Clients',
+          axisLabelDistance: -20,
+          tickFormat: function (d) {
+            return d3.format(',.f')(d);
+          }
+        }
+      }
+    }
+    ;
+
+    $scope.dataBars = [{
+      "key": "AGRIFRPPXXX",
+      "values": [{
+        "x": 0,
+        "y": 67
+      }, {
+        "x": 1,
+        "y": 59
+      }, {
+        "x": 2,
+        "y": 80
+      }, {
+        "x": 3,
+        "y": 81
+      }, {
+        "x": 4,
+        "y": 56
+      }]
+    }, {
+      "key": "SOGEFRPPXXX",
+      "values": [{
+        "x": 0,
+        "y": 67
+      }, {
+        "x": 1,
+        "y": 59
+      }, {
+        "x": 2,
+        "y": 80
+      }, {
+        "x": 3,
+        "y": 81
+      }, {
+        "x": 4,
+        "y": 56
+      }]
+    }, {
+      "key": "CEPAFRPPXXX",
+      "values": [{
+        "x": 0,
+        "y": 67
+      }, {
+        "x": 1,
+        "y": 59
+      }, {
+        "x": 2,
+        "y": 80
+      }, {
+        "x": 3,
+        "y": 81
+      }, {
+        "x": 4,
+        "y": 56
+      }]
+    }, {
+      "key": "CEPAFRPPXXX",
+      "values": [{
+        "x": 0,
+        "y": 67
+      }, {
+        "x": 1,
+        "y": 59
+      }, {
+        "x": 2,
+        "y": 80
+      }, {
+        "x": 3,
+        "y": 81
+      }, {
+        "x": 4,
+        "y": 56
+      }]
+    }];
+
+    $scope.options = {
+      chart: {
+        type: 'lineChart',
+        showLabels: false,
+        height: 450,
+        margin : {
+          top: 20,
+          right: 20,
+          bottom: 40,
+          left: 55
+        },
+        x: function(d){ return d.x; },
+        y: function(d){ return d.y; },
+        useInteractiveGuideline: true,
+        xAxis: {
+          tickFormat: function (d) {
+            return dates[d];
+          }
+        },
+        yAxis: {
+          axisLabel: '',
+          tickFormat: function(d){
+            return d3.format('.f')(d);
+          },
+          axisLabelDistance: -10
+        }
+      }
+    };
+
+    $scope.data =  [{
+      "key": "TOTAL",
+      "values": [{
+        "x": 0,
+        "y": 67
+      }, {
+        "x": 1,
+        "y": 59
+      }, {
+        "x": 2,
+        "y": 80
+      }, {
+        "x": 3,
+        "y": 81
+      }, {
+        "x": 4,
+        "y": 56
+      }]
+    }];
 
   });

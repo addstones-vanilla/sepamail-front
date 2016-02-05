@@ -35,8 +35,8 @@ module.exports = function(config) {
       'bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js',
       'bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
       'bower_components/d3/d3.js',
-      'bower_components/nvd3/nv.d3.js',
-      'bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js',
+      'bower_components/nvd3/build/nv.d3.js',
+      'bower_components/angular-nvd3/dist/angular-nvd3.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",
