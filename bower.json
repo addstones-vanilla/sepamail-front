@@ -11,7 +11,7 @@
     "angular-touch": "^1.4.0",
     "bootstrap": "^3.3.6",
     "eonasdan-bootstrap-datetimepicker": "^4.17.37",
-    "d3": "^3.5.14"
+    "angular-nvd3": "^1.0.5"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"

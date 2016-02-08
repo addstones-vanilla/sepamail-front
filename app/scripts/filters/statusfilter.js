@@ -12,7 +12,7 @@ angular.module('sepamailFrontApp')
   .filter('statusFilter', function () {
     return function (input) {
       switch(input){
-        case 0:
+        case "OK":
               return "<span class='glyphicon glyphicon-ok'></span>";
               break;
         case 1:
@@ -20,6 +20,9 @@ angular.module('sepamailFrontApp')
               break;
         case 2:
           return "<span class='glyphicon glyphicon-time'></span>";
+              break;
+        default:
+          console.log(input);
               break;
       }
     };

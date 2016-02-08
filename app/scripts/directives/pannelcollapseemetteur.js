@@ -2,9 +2,9 @@
   'use strict';
 
   angular.module("sepamailFrontApp")
-    .directive('pannelCollapse', pannelCollapse);
+    .directive('pannelCollapseEmetteur', pannelCollapseEmetteur);
 
-  function pannelCollapse() {
+  function pannelCollapseEmetteur() {
     return {
       restrict: 'EA',
       require: '^containerCollapse',
@@ -13,7 +13,7 @@
         title: '@',
         value: '@'
       },
-      templateUrl: "views/templates/pannelCollapse.html",
+      templateUrl: "views/templates/pannelCollapseEmetteur.html",
       link: function (scope, element, attrs, containerCtrl) {
 
         scope.showPannel = false;

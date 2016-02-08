@@ -7,11 +7,14 @@
  * # borderColor
  */
 angular.module('sepamailFrontApp')
-  .directive('borderColor', function (headerFactory) {
+  .directive('borderColor', function (headerFactory, $rootScope) {
     return {
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
-        element.css('border-color',headerFactory.colorMenu);
+
+        $rootScope.$on('$viewContentLoaded', function() {
+          element.css('border-color', headerFactory.colorMenu);
+        })
       }
     };
   });

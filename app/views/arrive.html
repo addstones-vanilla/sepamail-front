@@ -1,10 +1,23 @@
-
-
-<script type="text/javascript">
-
-</script>
-
-<div linear-graph id="chart">
+<div class="row">
+  <div class="col-md-6">
+    <h3>Banques de départ</h3>
+    <hr>
+    <div class="svg-container">
+      <nvd3 options='optionsDonut' data='dataDonut' class="graph"></nvd3>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h3>Banques de départ</h3>
+    <hr>
+    <div class="svg-container">
+      <nvd3 options='optionsBars' data='dataBars' class="graph"></nvd3>
+    </div>
+  </div>
 </div>
 
 
+<h3>Nombre d'arrivées</h3>
+<hr>
+<div class="svg-container">
+  <nvd3 options='options' data='data' class="graph"></nvd3>
+</div>

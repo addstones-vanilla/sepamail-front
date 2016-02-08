@@ -1,0 +1,32 @@
+<ul class="breadcrumb">
+  <li><a ng-href="#/{{banque}}/emetteur/accueil">Banque d'emetteur</a></li>
+  <li class="active">Suivi des remises</li>
+</ul>
+
+<container-tab-collapse>
+  <table class="table table-bordered">
+    <thead>
+    <tr  heading-color>
+      <th>Référence Remise</th>
+      <th>Créée le</th>
+      <th>Emetteur</th>
+      <th>BIC</th>
+      <th>Statut</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="remise in remises">
+    <tr>
+      <td>{{remise.Reference}}</td>
+      <td>{{remise.CreatedDate}}</td>
+      <td>{{remise.Remitter}}</td>
+      <td>{{remise.BIC}}</td>
+      <td>{{remise.Status}}</td>
+      <td>
+        <a ng-href="#/{{banque}}/emetteur/emetteur-view"><i class="glyphicon" ng-class="{'glyphicon-search': !showPannel, 'hidden': showPannel}"></i></a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</container-tab-collapse>

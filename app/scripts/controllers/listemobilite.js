@@ -2,21 +2,20 @@
 
 /**
  * @ngdoc function
- * @name sepamailFrontApp.controller:FormulaireCtrl
+ * @name sepamailFrontApp.controller:ListemobiliteCtrl
  * @description
- * # FormulaireCtrl
+ * # ListemobiliteCtrl
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('FormulaireCtrl', function ($scope,$routeParams) {
+  .controller('ListemobiliteCtrl', function ($scope, mandatsFactory,$routeParams) {
     $scope.banque = $routeParams.banque_name;
+
+    $scope.mandats = mandatsFactory;
 
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-
-        $('#datetimepicker1').datetimepicker();
-        $('#datetimepicker2').datetimepicker();
   });

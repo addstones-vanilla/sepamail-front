@@ -7,19 +7,24 @@
  * # menuTop
  */
 angular.module('sepamailFrontApp')
-  .directive('menuTop', function ($routeParams, menuTopFactory, $location, headerFactory) {
+  .directive('menuTop', function ($routeParams, menuTopFactory, $location, $rootScope) {
     return {
       restrict: 'E',
       link: function postLink(scope, element) {
 
-        var urlPath = $location.path();
+        $rootScope.$on('$viewContentLoaded', function () {
 
-        var bankName = urlPath.split("/");
+          element.html('');
 
-        var bank =
-          element.append(menuTopFactory.getMenu(bankName[2], bankName[1]));
+          var urlPath = $location.path();
+
+          var bankName = urlPath.split("/");
+
+          var bank =
+            element.append(menuTopFactory.getMenu(bankName[2], bankName[1]));
+        })
 
 
-      }
-    };
+        }
+      };
   });
