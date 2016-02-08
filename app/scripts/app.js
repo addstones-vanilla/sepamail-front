@@ -105,6 +105,11 @@ angular
         controller: 'EmetteurViewCtrl',
         controllerAs: 'emetteurView'
       })
+      .when('/test/:bank', {
+        templateUrl: 'views/test.html',
+        controller: 'TestCtrl',
+        controllerAs: 'test'
+      })
       .otherwise({
         redirectTo: '/error'
       });

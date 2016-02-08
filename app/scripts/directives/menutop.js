@@ -7,7 +7,7 @@
  * # menuTop
  */
 angular.module('sepamailFrontApp')
-  .directive('menuTop', function ($routeParams, menuTopFactory, $location, $rootScope) {
+  .directive('menuTop', function ($routeParams,$location, $rootScope, menuTopFactory) {
     return {
       restrict: 'E',
       link: function postLink(scope, element) {
