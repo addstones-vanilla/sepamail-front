@@ -10,5 +10,5 @@
 angular.module('sepamailFrontApp')
   .controller('MainCtrl', function ($routeParams,$scope) {
 
-    $scope.banque_name = $routeParams.banque_name;
+    $scope.bank = $routeParams.bank;
   });

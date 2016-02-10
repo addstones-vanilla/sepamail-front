@@ -50,5 +50,5 @@ angular.module('sepamailFrontApp')
     $scope.checks = operationsFactory.ListeEmetteur[3].ListCheck;
     $scope.checkNb = operationsFactory.ListeEmetteur[3].Nbcheck;
 
-    $scope.banque = $routeParams.banque_name;
+    $scope.banque = $routeParams.bank;
   });

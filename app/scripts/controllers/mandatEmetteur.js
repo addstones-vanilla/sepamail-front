@@ -20,5 +20,5 @@ angular.module('sepamailFrontApp')
 
     $scope.emetteurs = emetteursFactory.ListRemitter;
 
-    $scope.banque = $routeParams.banque_name;
+    $scope.banque = $routeParams.bank;
   });

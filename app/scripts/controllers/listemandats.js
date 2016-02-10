@@ -10,7 +10,7 @@
 angular.module('sepamailFrontApp')
   .controller('ListemandatsCtrl', function ($scope, mandatsFactory, $routeParams) {
     var statutMandats = $routeParams.statut;
-    $scope.banque = $routeParams.banque_name;
+    $scope.banque = $routeParams.bank;
 
     switch(statutMandats){
       case "non-signe":

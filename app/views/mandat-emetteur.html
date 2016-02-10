@@ -46,7 +46,7 @@
       <table class="table table-bordered">
         <thead>
         Prelevement : {{emetteur.ListDirectDebitRemitter.length}}
-        <tr heading-color>
+        <tr  ng-class="panelclass">
           <th>RUM</th>
           <th>Type</th>
           <th>Référence Opération</th>
@@ -67,7 +67,7 @@
       <table class="table table-bordered">
         <thead>
         Virements Reçus : {{emetteur.ListReceivedCreditTransferRemitter.length}}
-        <tr heading-color>
+        <tr  ng-class="panelclass">
           <th>Référence Opération</th>
           <th>&nbsp;</th>
           <th>&nbsp;</th>

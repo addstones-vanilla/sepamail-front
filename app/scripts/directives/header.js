@@ -28,6 +28,7 @@ angular.module('sepamailFrontApp')
           var bank = bankClass.setBank(bankId);
           $scope.myclass = bank.cssClass;
           $scope.imgclass = bank.imgClass;
+          $scope.panelclass = bank.panelClass;
           console.log('dans ma directive : ', bank.cssClass);
         })
 
