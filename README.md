@@ -1,12 +1,43 @@
-# sepamail-front
+# Sepamail Front
+HTML framework integration for Sepamail
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+## Install process for PC / Windows
 
-## Build & development
+### Install npm tools
+Open a cmd console as admin and, in the root directory of the project, type  : 
 
-Run `grunt` for building and `grunt serve` for preview.
+``` npm i -g bower ```
 
-## Testing
+### Install project dependencies
+1. ``` npm i ```
+2. ``` cd  app/ ```
+3. ``` bower i ```
+4. ``` cd ../server/ ```
+5. ``` npm i ```
 
-Running `grunt test` will run the unit tests with karma.
+### Launch livereload for dev
+``` grunt serve ```
+
+### Launch Web server
+4. In your browser open ``` http://localhost:9000/#/ ```
+
+
+## Install process for Mac / Linux
+
+### Install npm tools
+Open a cmd console as admin and, in the root directory of the project, type  : 
+
+``` npm i -g bower ```
+
+### Install project dependencies
+1. ``` npm i ```
+2. ``` cd  app/ ```
+3. ``` bower i ```
+4. ``` cd ../server/ ```
+5. ``` npm i ```
+
+### Launch livereload for dev
+``` grunt serve ```
+
+### Launch Web server
+4. In your browser open ``` http://localhost:9000/#/ ```
