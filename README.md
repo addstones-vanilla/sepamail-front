@@ -1,4 +1,4 @@
-# NATIXIS-CTA-WEB
+# Sepamail Front
 HTML framework integration for Sepamail
 
 ## Install process for PC / Windows
