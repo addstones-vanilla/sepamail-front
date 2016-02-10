@@ -8,8 +8,8 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('TestCtrl', function ($scope, $routeParams, testBankFact) {
+  .controller('TestCtrl', function ($scope, $routeParams, bankClass) {
 
     var bankId = $routeParams.bank;
-    $scope.bank = testBankFact.setBank(bankId);
+    $scope.bank = bankClass.setBank(bankId);
   });

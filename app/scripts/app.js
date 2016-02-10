@@ -30,86 +30,86 @@ angular
         controller: 'ErrorCtrl',
         controllerAs: 'error'
       })
-      .when('/:banque_name/:test/main', {
+      .when('/:bank/:test/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/:banque_name/about', {
+      .when('/:bank/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/:banque_name/arrive/accueil', {
+      .when('/:bank/arrive/accueil', {
         templateUrl: 'views/arrive.html',
         controller: 'ArriveCtrl',
         controllerAs: 'arrive'
       })
-      .when('/:banque_name/depart/accueil', {
+      .when('/:bank/depart/accueil', {
         templateUrl: 'views/depart.html',
         controller: 'DepartCtrl',
         controllerAs: 'depart'
       })
-      .when('/:banque_name/emetteur/accueil', {
+      .when('/:bank/emetteur/accueil', {
         templateUrl: 'views/emetteur.html',
         controller: 'EmetteurCtrl',
         controllerAs: 'emetteur'
       })
-      .when('/:banque_name/:etat/mandat-operation/:nbMandat', {
+      .when('/:bank/:etat/mandat-operation/:nbMandat', {
         templateUrl: 'views/mandat-operation.html',
         controller: 'RecapmandatCtrl',
         controllerAs: 'recapMandat'
       })
-      .when('/:banque_name/:etat/mandat-emetteur/:nbMandat', {
+      .when('/:bank/:etat/mandat-emetteur/:nbMandat', {
         templateUrl: 'views/mandat-emetteur.html',
         controller: 'MandatEmetteurCtrl',
         controllerAs: 'mandatEmetteur'
       })
-      .when('/:banque_name/recapOperation', {
+      .when('/:bank/recapOperation', {
         templateUrl: 'views/recapoperation.html',
         controller: 'RecapoperationCtrl',
         controllerAs: 'recapOperation'
       })
-      .when('/:banque_name/:etat/listeMandats/:statut', {
+      .when('/:bank/:etat/listeMandats/:statut', {
         templateUrl: 'views/listemandats.html',
         controller: 'ListemandatsCtrl',
         controllerAs: 'listeMandats'
       })
-      .when('/:banque_name/:etat/listeMobilite', {
+      .when('/:bank/:etat/listeMobilite', {
         templateUrl: 'views/listemobilite.html',
         controller: 'ListemobiliteCtrl',
         controllerAs: 'listeMobilite'
       })
-      .when('/:banque_name/:etat/listeAnomalies', {
+      .when('/:bank/:etat/listeAnomalies', {
         templateUrl: 'views/listeanomalies.html',
         controller: 'ListeanomaliesCtrl',
         controllerAs: 'listeAnomalies'
       })
-      .when('/:banque_name/:etat/listedomiciliation', {
+      .when('/:bank/:etat/listedomiciliation', {
         templateUrl: 'views/listedomiciliation.html',
         controller: 'ListedomiciliationCtrl',
         controllerAs: 'listeDomiciliation'
       })
-      .when('/:banque_name/:etat/suiviRemises', {
+      .when('/:bank/:etat/suiviRemises', {
         templateUrl: 'views/listeremises.html',
         controller: 'ListeremiseCtrl',
         controllerAs: 'listeRemises'
       })
-      .when('/:banque_name/arrive/formulaire', {
+      .when('/:bank/arrive/formulaire', {
         templateUrl: 'views/formulaire.html',
         controller: 'FormulaireCtrl',
         controllerAs: 'formulaire'
       })
-      .when('/:banque_name/emetteur/emetteur-view', {
+      .when('/:bank/emetteur/emetteur-view', {
         templateUrl: 'views/emetteur-view.html',
         controller: 'EmetteurViewCtrl',
         controllerAs: 'emetteurView'
       })
-      .when('/test/:bank', {
-        templateUrl: 'views/test.html',
-        controller: 'TestCtrl',
-        controllerAs: 'test'
-      })
+      //.when('/test/:bank', {
+      //  templateUrl: 'views/test.html',
+      //  controller: 'BankCtrl',
+      //  controllerAs: 'test'
+      //})
       .otherwise({
         redirectTo: '/error'
       });

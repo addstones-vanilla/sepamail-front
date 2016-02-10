@@ -249,23 +249,50 @@ h5.title-header-form {
 }
 
 
-.lcl-main-class {
-  background-image: url('../images/banques/lcl.png');
-  width: 50px;
-  height: 50px;
+.lcl-img-class {
+  background: url('../images/banques/lcl.png')  no-repeat left;
+  width: 100%;
+  height: 100px;
+  background-size: contain;
+}
+
+.lcl-back-class {
+  background-color:#21368B;
 }
 
 
-.fortuneo-main-class {
-  background-image: url('../images/banques/fortuneo.jpg');
-  width: 50px;
-  height: 50px;
+.fortuneo-img-class {
+  background: url('../images/banques/fortuneo.jpg')  no-repeat left;
+  width: 100%;
+  height: 100px;
+  background-size: contain;
 }
 
-.sg-main-class {
-  background-image: url('../images/banques/societe-generale.png');
-  width: 50px;
-  height: 50px;
+.fortuneo-back-class {
+  background-color:#a0e442;
+}
+
+.sg-img-class {
+  background: url('../images/banques/societe-generale.jpg')  no-repeat left;
+  width: 100%;
+  height: 100px;
+  background-size: contain;
+}
+
+.sg-back-class {
+  background-color: #1D1D1B;
+}
+
+
+.cmb-img-class {
+  background: url('../images/banques/cmb.png')  no-repeat left;
+  width: 100%;
+  height: 100px;
+  background-size: contain;
+}
+
+.cmb-back-class {
+  background-color:#FFFFFF;
 }
 
 
