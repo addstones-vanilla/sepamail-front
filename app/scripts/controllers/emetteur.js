@@ -9,7 +9,7 @@
  */
 angular.module('sepamailFrontApp')
   .controller('EmetteurCtrl', function (emetteursFactory, $routeParams, $scope) {
-    $scope.banque_name = $routeParams.banque_name;
+    $scope.banque_name = $routeParams.bank;
 
     $scope.MandateNumber = emetteursFactory.MandateNumber;
     $scope.SignedDate = emetteursFactory.SignedDate;

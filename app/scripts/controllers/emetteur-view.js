@@ -9,7 +9,7 @@
  */
 angular.module('sepamailFrontApp')
   .controller('EmetteurViewCtrl', function (emetteursFactory, $scope, remiseFactory, $routeParams) {
-    $scope.banque = $routeParams.banque_name;
+    $scope.banque = $routeParams.bank;
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

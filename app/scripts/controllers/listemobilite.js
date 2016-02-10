@@ -9,7 +9,7 @@
  */
 angular.module('sepamailFrontApp')
   .controller('ListemobiliteCtrl', function ($scope, mandatsFactory,$routeParams) {
-    $scope.banque = $routeParams.banque_name;
+    $scope.banque = $routeParams.bank;
 
     $scope.mandats = mandatsFactory;
 

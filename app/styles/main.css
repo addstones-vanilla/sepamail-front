@@ -257,7 +257,11 @@ h5.title-header-form {
 }
 
 .lcl-back-class {
-  background-color:#21368B;
+  background-color:#21368B!important;
+}
+
+.lcl-panel-class {
+  background-color:#00B4E5;
 }
 
 
@@ -269,7 +273,11 @@ h5.title-header-form {
 }
 
 .fortuneo-back-class {
-  background-color:#a0e442;
+  background-color:#a0e442!important;
+}
+
+.fortuneo-panel-class {
+  background-color:#232323!important;
 }
 
 .sg-img-class {
@@ -280,9 +288,12 @@ h5.title-header-form {
 }
 
 .sg-back-class {
-  background-color: #1D1D1B;
+  background-color: #1D1D1B!important;
 }
 
+.sg-panel-class {
+  background-color: #E20030!important;
+}
 
 .cmb-img-class {
   background: url('../images/banques/cmb.png')  no-repeat left;
@@ -292,8 +303,13 @@ h5.title-header-form {
 }
 
 .cmb-back-class {
-  background-color:#FFFFFF;
+  background-color:#FFFFFF!important;
 }
 
+.cmb-panel-class {
+  background-color:#CA1317!important;
+}
 
-
+.panel, .panel-heading {
+  border: none;
+}

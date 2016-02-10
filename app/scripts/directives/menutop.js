@@ -7,12 +7,27 @@
  * # menuTop
  */
 angular.module('sepamailFrontApp')
-  .directive('menuTop', function ($routeParams,$location, $rootScope, menuTopFactory) {
+  .directive('menuTop', function ($routeParams,$location, menuTopFactory,bankClass) {
     return {
       restrict: 'E',
-      link: function postLink(scope, element) {
+      link: function postLink($scope, element) {
 
-        $rootScope.$on('$viewContentLoaded', function () {
+        var urlPath = $location.path();
+
+        var bankName = urlPath.split("/");
+
+        var bank = bankClass.setBank(bankName[1]);
+
+        var panelclass = bank.panelClass;
+
+        console.log(panelclass);
+
+        var bank =
+          element.append(menuTopFactory.getMenu(bankName[2], bankName[1], panelclass));
+
+
+
+        $scope.$on('$viewContentLoaded', function () {
 
           element.html('');
 
@@ -20,8 +35,14 @@ angular.module('sepamailFrontApp')
 
           var bankName = urlPath.split("/");
 
+          var bank = bankClass.setBank(bankName[1]);
+
+          var panelclass = bank.panelClass;
+
+          console.log(panelclass);
+
           var bank =
-            element.append(menuTopFactory.getMenu(bankName[2], bankName[1]));
+            element.append(menuTopFactory.getMenu(bankName[2], bankName[1], panelclass));
         })
 
 

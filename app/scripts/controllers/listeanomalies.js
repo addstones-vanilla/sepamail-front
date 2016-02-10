@@ -9,7 +9,7 @@
  */
 angular.module('sepamailFrontApp')
   .controller('ListeanomaliesCtrl', function ($scope,$routeParams, anomalieFactory) {
-    $scope.banque = $routeParams.banque_name;
+    $scope.banque = $routeParams.bank;
     $scope.etat = $routeParams.etat;
 
     switch($scope.etat){

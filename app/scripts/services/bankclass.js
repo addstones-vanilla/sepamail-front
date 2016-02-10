@@ -12,10 +12,10 @@ angular.module('sepamailFrontApp')
 
     function Bank() {
       this.acceptable = [
-        {name: 'lcl', cssClass: 'lcl-back-class', imgClass: 'lcl-img-class'},
-        {name: 'fortuneo', cssClass: 'fortuneo-back-class', imgClass: 'fortuneo-img-class'},
-        {name: 'socgen', cssClass: 'sg-back-class', imgClass: 'sg-img-class'},
-        {name: 'cmb', cssClass: 'cmb-back-class', imgClass: 'cmb-img-class'}];
+        {name: 'lcl', cssClass: 'lcl-back-class', imgClass: 'lcl-img-class', panelClass: 'lcl-panel-class'},
+        {name: 'fortuneo', cssClass: 'fortuneo-back-class', imgClass: 'fortuneo-img-class', panelClass: 'fortuneo-panel-class'},
+        {name: 'socgen', cssClass: 'sg-back-class', imgClass: 'sg-img-class', panelClass: 'sg-panel-class'},
+        {name: 'cmb', cssClass: 'cmb-back-class', imgClass: 'cmb-img-class', panelClass: 'cmb-panel-class'}];
     }
 
     Bank.prototype.testIsAcceptable = function (bankClass) {
