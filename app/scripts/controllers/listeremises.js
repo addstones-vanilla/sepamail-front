@@ -9,7 +9,7 @@
  */
 angular.module('sepamailFrontApp')
   .controller('ListeremiseCtrl', function ($routeParams,$scope, remiseFactory) {
-    $scope.banque = $routeParams.banque_name;
+    $scope.banque = $routeParams.bank;
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

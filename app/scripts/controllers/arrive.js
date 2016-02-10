@@ -8,7 +8,14 @@
  * Controller of the sepamailFrontApp
  */
 angular.module('sepamailFrontApp')
-  .controller('ArriveCtrl', function (mandatsFactory, $scope) {
+  .controller('ArriveCtrl', function ($scope, $routeParams, mandatsFactory, bankClass) {
+
+    var bankId = $routeParams.bank;
+    console.log(bankId);
+    $scope.bank = bankClass.setBank(bankId);
+
+
+
 
     $scope.optionsDonut = {
       chart: {
