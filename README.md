@@ -41,3 +41,6 @@ Open a cmd console as admin and, in the root directory of the project, type  :
 
 ### Launch Web server
 4. In your browser open ``` http://localhost:9000/#/ ```
+
+### Charts
+Check the nvd3.js official documentation : http://angularjs-nvd3-directives.github.io/angularjs-nvd3-directives/
